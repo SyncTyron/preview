@@ -1,0 +1,57 @@
+{
+  "summary": "Frontend-only rendering/content review of MK Gebäudemanagement site (rebrand from Roda Haustechnik). All required content, sections, images, nav behavior and contact info verified. No SHK residue on visible landing page (legal pages intentionally excluded).",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": [
+      {"screen": "Global (React)", "issues": ["Console warning: 'Invalid DOM property fetchpriority. Did you mean fetchPriority?' – lowercase attribute used on <img>/<link>; harmless but should be renamed to camelCase in JSX."]}
+    ]
+  },
+  "verification_details": {
+    "hero": {"title 'MK Gebäudemanagement'": true, "subtitle 'Gebäudereinigung · Grünflächenpflege · Winterdienst'": true, "overline 'Gebäudemanagement in Duisburg'": "present in HTML (rendered UPPERCASE via CSS text-transform)"},
+    "nav_items": ["Startseite", "Leistungen", "Referenzen", "Gebäudereinigung", "Kontakt"],
+    "nav_click_gebaeudereinigung": "Scrolls to #bathroom (rect.top ≈ 80px after smooth scroll) – PASS",
+    "services_6_items": ["Gebäudereinigung", "Grünflächenpflege", "Winterdienst", "Fenster- & Glasreinigung", "Grund- & Sonderreinigung", "Individuelle Objektpflege"],
+    "detail_sections": {
+      "detail-section-0/1/2": "all present",
+      "detail-image-0": "nw=1400 /img/detail-gebaeudereinigung.jpg",
+      "detail-image-1": "nw=1400 /img/detail-gruenflaeche.jpg",
+      "detail-image-2": "nw=1400 /img/detail-winter.jpg"
+    },
+    "gallery": {
+      "gallery-image-0": "1600x2456 /img/gallery-1.jpg",
+      "gallery-image-1": "1200x1800 /img/gallery-2.jpg",
+      "gallery-image-2": "1200x800 /img/gallery-3.jpg",
+      "gallery-image-3": "2400x1601 /img/gallery-4.jpg",
+      "gallery-image-4": "2400x1600 /img/gallery-5.jpg",
+      "note": "data-testid is on wrapper <div>; <img> is the child. All load correctly."
+    },
+    "faq": "Contains 'Reinigungsleistungen', 'Winterdienst', 'Grünflächenpflege'; no 'Badsanierung'/'Heizung' terms.",
+    "contact_footer": {
+      "phone +49 163 210 66 88": true,
+      "email info@mk-gebaeudemanagement.de": true,
+      "address Auf dem Damm 112, 47137 Duisburg": true,
+      "brand MK Gebäudemanagement": true
+    },
+    "forbidden_SHK_terms_on_landing": {
+      "Roda": 0, "Haustechnik": 0, "Badsanierung": 0, "Heizung": 0, "Rohrbruch": 0, "Meisterbetrieb Herzogenrath": 0,
+      "Sanitär": "1 occurrence – legitimate context: 'Pflege von Böden, Fenstern und Sanitäranlagen.' (Grund- & Sonderreinigung bullet). Not a rebrand leak, but flag if strict."
+    }
+  },
+  "test_report_links": [],
+  "action_items": [
+    "(Optional) Fix React warning: rename `fetchpriority` prop to `fetchPriority` on <img>/<link> in JSX to silence console warning.",
+    "(Optional/Cosmetic) If 'Sanitär' should be avoided entirely, rephrase Grund- & Sonderreinigung bullet in translations.js (e.g., 'Pflege von Böden, Fenstern und WC-Bereichen')."
+  ],
+  "critical_code_review_comments": [
+    "Header nav uses <button> instead of <a href='#...'>. Works but hurts SEO/deep-linking; consider anchor tags with smooth-scroll handler.",
+    "Gallery data-testid is on wrapper div, not on the <img>. Downstream tests should query 'div[data-testid=gallery-image-i] img' or move data-testid to the <img>."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "N/A (skipped)", "frontend": "100% of listed checks passed"},
+  "seed_data_creation": "None",
+  "retest_needed": false,
+  "should_main_agent_self_test": true,
+  "context_for_next_testing_agent": "Frontend rebrand from Roda Haustechnik → MK Gebäudemanagement is complete on the landing page. Contact form was NOT submitted (per instruction: REACT_APP_BACKEND_URL points to external prod). Legal pages (Impressum/Datenschutz/AGB/Widerruf) still contain old SHK content by design – do not test/report them. The only lingering 'Sanitär' string is inside the Grund- & Sonderreinigung bullet in translations.js and is contextually correct."
+}

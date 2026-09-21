@@ -22,7 +22,7 @@ export default function Hero() {
           className="w-full h-full object-cover"
           width="1920"
           height="1080"
-          fetchpriority="high"
+          fetchPriority="high"
           decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A]/85 via-[#0F172A]/60 to-[#0F172A]/20" />
