@@ -57,8 +57,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="font-manrope font-semibold text-[#1C1917] text-sm mb-0.5">{t.contact.phoneLabel}</p>
-                  <a href="tel:+4915221006829" className="font-manrope text-[#57534E] hover:text-[#0E6FB3] transition-colors text-lg" data-testid="contact-phone-link">
-                    +49 152 2100 6829
+                  <a href="tel:+491632106688" className="font-manrope text-[#57534E] hover:text-[#0E6FB3] transition-colors text-lg" data-testid="contact-phone-link">
+                    +49 163 210 66 88
                   </a>
                 </div>
               </div>
@@ -68,8 +68,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="font-manrope font-semibold text-[#1C1917] text-sm mb-0.5">{t.contact.emailLabel}</p>
-                  <a href="mailto:kontakt@roda-haustechnik.de" className="font-manrope text-[#57534E] hover:text-[#0E6FB3] transition-colors" data-testid="contact-email-link">
-                    kontakt@roda-haustechnik.de
+                  <a href="mailto:info@mk-gebaeudemanagement.de" className="font-manrope text-[#57534E] hover:text-[#0E6FB3] transition-colors" data-testid="contact-email-link">
+                    info@mk-gebaeudemanagement.de
                   </a>
                 </div>
               </div>
@@ -79,7 +79,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="font-manrope font-semibold text-[#1C1917] text-sm mb-0.5">{t.contact.address}</p>
-                  <p className="font-manrope text-[#57534E]">Schillerstr. 14<br />52134 Herzogenrath</p>
+                  <p className="font-manrope text-[#57534E]">Auf dem Damm 112<br />47137 Duisburg</p>
                 </div>
               </div>
             </div>

@@ -1,13 +1,13 @@
 import { useLanguage } from "../context/LanguageContext";
-import { Flame, Droplets, Bath, Wrench, HeadsetIcon, Pipette } from "lucide-react";
+import { Building2, Sprout, Snowflake, Sparkles, Brush, ClipboardList } from "lucide-react";
 
 const serviceIcons = [
-  <Flame size={32} />,
-  <Droplets size={32} />,
-  <Bath size={32} />,
-  <Wrench size={32} />,
-  <HeadsetIcon size={32} />,
-  <Pipette size={32} />,
+  <Building2 size={32} />,
+  <Sprout size={32} />,
+  <Snowflake size={32} />,
+  <Sparkles size={32} />,
+  <Brush size={32} />,
+  <ClipboardList size={32} />,
 ];
 
 const iconColors = [
@@ -20,9 +20,9 @@ const iconColors = [
 ];
 
 const serviceImages = [
-  "/img/service-section-heating.webp",
-  "/img/service-section-plumbing.webp",
-  "/img/service-section-bathroom.webp",
+  "/img/clean-service-building.jpg",
+  "/img/clean-service-green.jpg",
+  "/img/clean-service-winter.jpg",
   null,
   null,
   null,

@@ -25,12 +25,12 @@ export default function NotdienstBanner() {
         </div>
         <div className="flex items-center gap-2 flex-shrink-0">
           <a
-            href="tel:+4915221006829"
+            href="tel:+491632106688"
             data-testid="notdienst-call-btn"
             className="inline-flex items-center gap-1.5 bg-white text-[#C0562F] font-manrope font-bold text-xs px-3 py-1.5 rounded-sm hover:bg-white/90 transition-colors whitespace-nowrap"
           >
             <Phone size={12} />
-            +49 152 2100 6829
+            +49 163 210 66 88
           </a>
           <button
             data-testid="notdienst-close-btn"

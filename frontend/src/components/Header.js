@@ -76,13 +76,13 @@ export default function Header({ showBanner = false }) {
             }}
             className="flex items-center gap-2 sm:gap-3 cursor-pointer"
           >
-            <img src="/logo.svg" alt="Roda Haustechnik Logo" className="h-8 sm:h-10 md:h-12 w-auto" width="48" height="48" />
+            <img src="/logo.svg" alt="MK Gebäudemanagement Logo" className="h-8 sm:h-10 md:h-12 w-auto" width="48" height="48" />
             <div className="hidden sm:block">
               <span className={`font-outfit font-bold text-base sm:text-lg tracking-tight ${scrolled ? "text-[#1C1917]" : "text-white"}`}>
-                Roda
+                MK
               </span>
               <span className={`font-outfit font-light text-base sm:text-lg ml-1 ${scrolled ? "text-[#57534E]" : "text-white/70"}`}>
-                Haustechnik
+                Gebäudemanagement
               </span>
             </div>
           </button>

@@ -1,48 +1,47 @@
 import { COMPANY } from '../config/company';
-// TODO(company.js): Telefonnummer/Adresse/Geo aus COMPANY verwenden.
 import { useEffect } from "react";
 
 const schemaData = {
   "@context": "https://schema.org",
-  "@type": "Plumber",
-  "name": "Roda Haustechnik",
-  "description": "Meisterbetrieb f\u00fcr Sanit\u00e4r, Heizung und Badsanierung in Herzogenrath und Aachen.",
-  "url": "https://www.roda-haustechnik.de",
-  "telephone": "+4915221006829",
-  "email": "kontakt@roda-haustechnik.de",
+  "@type": "ProfessionalService",
+  "name": "MK Gebäudemanagement",
+  "description": "Gebäudereinigung, Grünflächenpflege und Winterdienst für Büro, Praxis und Gewerbe in Duisburg und im Ruhrgebiet.",
+  "url": "https://mk-gebaeudemanagement.de",
+  "telephone": "+491632106688",
+  "email": "info@mk-gebaeudemanagement.de",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Schillerstr. 14",
-    "addressLocality": "Herzogenrath",
-    "postalCode": "52134",
+    "streetAddress": "Auf dem Damm 112",
+    "addressLocality": "Duisburg",
+    "postalCode": "47137",
     "addressCountry": "DE"
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": "50.8686",
-    "longitude": "6.0936"
+    "latitude": "51.4344",
+    "longitude": "6.7623"
   },
   "areaServed": [
-    "Herzogenrath", "Aachen", "Eschweiler", "Stolberg", "W\u00fcrselen", "Roetgen", "Kreis Heinsberg", "Kreis D\u00fcren"
+    "Duisburg", "Ruhrgebiet"
   ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Leistungen",
     "itemListElement": [
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Heizungsbau" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sanit\u00e4rinstallationen" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Badsanierung" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Rohrbruchbehebung" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kundendienst & Reparaturen" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Gas- & Wasserinstallationen" } }
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Gebäudereinigung" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Grünflächenpflege" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Winterdienst" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fenster- & Glasreinigung" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Grund- & Sonderreinigung" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Individuelle Objektpflege" } }
     ]
   },
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "opens": "08:00",
-      "closes": "18:00"
+      "opens": "07:00",
+      "closes": "16:30"
     }
   ],
   "priceRange": "$$"

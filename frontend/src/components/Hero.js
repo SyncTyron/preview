@@ -17,8 +17,8 @@ export default function Hero() {
     >
       <div className="absolute inset-0">
         <img
-          src="/img/hero-section-modern-bathroom.webp"
-          alt="Modernes Badezimmer mit freistehender Wanne, begehbarer Dusche, großem Spiegel, wandmontiertem Waschbecken und Handtuchhalter"
+          src="/img/clean-hero.jpg"
+          alt="Professionelle Gebäudereinigung – Reinigungskraft bei der Arbeit in einem modernen Büro"
           className="w-full h-full object-cover"
           width="1920"
           height="1080"

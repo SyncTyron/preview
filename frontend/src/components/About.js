@@ -7,19 +7,19 @@ export default function About() {
   const trustItems = [
     {
       icon: <Shield size={28} />,
-      title: "Meisterbetrieb",
+      title: lang === "DE" ? "Zuverl\u00e4ssig" : "Reliable",
       desc:
         lang === "DE"
-          ? "Zertifizierter Fachbetrieb mit Meisterqualifikation"
-          : "Certified specialist with master craftsman qualification",
+          ? "Termintreue und verl\u00e4ssliche Ausf\u00fchrung bei jedem Einsatz"
+          : "On-time and dependable execution on every job",
     },
     {
       icon: <Award size={28} />,
-      title: lang === "DE" ? "Qualit\u00e4t" : "Quality",
+      title: lang === "DE" ? "Sorgf\u00e4ltig" : "Meticulous",
       desc:
         lang === "DE"
-          ? "H\u00f6chste Pr\u00e4zision und Zuverl\u00e4ssigkeit"
-          : "Highest precision and reliability",
+          ? "H\u00f6chster Anspruch an Sauberkeit und Hygiene"
+          : "The highest standard of cleanliness and hygiene",
     },
   ];
 

@@ -2,32 +2,32 @@ import { useLanguage } from "../context/LanguageContext";
 
 const galleryImages = [
   {
-    src: "/img/gallery-section-white-modern-bathroom-front-view.webp",
-    alt: "Modern bathroom with a glass-enclosed shower, freestanding bathtub, double-sink vanity with wood drawers, large mirror, and marble floor and walls.",
+    src: "/img/gallery-1.jpg",
+    alt: "Fassadenreiniger reinigt die Glasfront eines modernen Bürogebäudes.",
     span: "md:col-span-7 md:row-span-2",
     w: 1600, h: 1200,
   },
   {
-    src: "/img/gallery-section-white-clean-modern-bathroom-front-view.webp",
-    alt: "Modern bathroom with white marble walls, a rectangular white bathtub, black fixtures including a wall-mounted showerhead and faucet, and a window providing natural light.",
+    src: "/img/gallery-2.jpg",
+    alt: "Nahaufnahme eines Abziehers bei der streifenfreien Fensterreinigung.",
     span: "md:col-span-5",
     w: 1200, h: 800,
   },
   {
-    src: "/img/gallery-section-white-modern-bathroom-site-view.webp",
-    alt: "Modern bathroom with a wall-mounted mirror, a gray vanity with a sink, a white toilet, and a glass-enclosed shower featuring a rainfall showerhead.",
+    src: "/img/gallery-3.jpg",
+    alt: "Gepflegte Grünanlage mit blühenden Beeten und getrimmten Hecken.",
     span: "md:col-span-5",
     w: 1200, h: 800,
   },
   {
-    src: "/img/gallery-section-a-running-faucet.webp",
-    alt: "A running faucet in a modern bathroom setting.",
+    src: "/img/gallery-4.jpg",
+    alt: "Gärtner schneidet mit einer Heckenschere einen Strauch in Form.",
     span: "md:col-span-6",
     w: 1200, h: 800,
   },
   {
-    src: "/img/gallery-section-copper-pipes-behind-a-wall.webp",
-    alt: "Two copper pipes run vertically through an exposed wall section, revealing wooden slats and gray plaster behind the pipes.",
+    src: "/img/gallery-5.jpg",
+    alt: "Räumfahrzeug im Winterdienst-Einsatz auf einer verschneiten Straße.",
     span: "md:col-span-6",
     w: 1200, h: 800,
   },
