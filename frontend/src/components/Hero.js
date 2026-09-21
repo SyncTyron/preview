@@ -29,11 +29,11 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 pt-24 pb-16">
-        <div className="max-w-2xl animate-hero-in">
+        <div className="max-w-3xl animate-hero-in">
           <span className="inline-block text-sm font-bold tracking-[0.2em] uppercase text-[#7DD3FC] mb-4 font-manrope drop-shadow-[0_1px_4px_rgba(0,0,0,0.6)]">
             {t.hero.overline}
           </span>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tighter text-white font-outfit mb-3">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tighter text-white font-outfit mb-3 whitespace-nowrap" data-testid="hero-title">
             {t.hero.title}
           </h1>
           <p className="text-xl sm:text-2xl font-outfit font-light text-white/90 mb-6">

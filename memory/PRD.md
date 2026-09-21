@@ -20,6 +20,7 @@ Rechtliche Seiten (Impressum, Datenschutz, AGB, Widerruf) und Cookie-Banner NICH
 - Neue Stockbilder in /app/frontend/public/img (clean-*, detail-*, gallery-1..5)
 - SchemaOrg.js + public/index.html: SEO/JSON-LD auf MK Gebäudemanagement (Duisburg)
 - Fix: fetchpriority → fetchPriority (React-Warnung)
+- Hero.js: Titel „MK Gebäudemanagement" einzeilig (whitespace-nowrap, Container max-w-3xl, mobil text-3xl)
 
 ## Bewusst unverändert
 - Impressum/Datenschutz/AGB/Widerruf-Seiten + CookieBanner (noch alte Firma – Kunde aktualisiert)
