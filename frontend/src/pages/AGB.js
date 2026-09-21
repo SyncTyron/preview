@@ -14,7 +14,7 @@ export default function AGB() {
         <a
           href="/"
           data-testid="agb-back-link"
-          className="inline-flex items-center gap-2 text-[#0E6FB3] hover:text-[#0A5A94] font-manrope font-semibold text-sm mb-8 transition-colors"
+          className="inline-flex items-center gap-2 text-[#0A8EDB] hover:text-[#0873B3] font-manrope font-semibold text-sm mb-8 transition-colors"
         >
           <ArrowLeft size={16} />
           {back}
@@ -115,7 +115,7 @@ export default function AGB() {
               <a
                 href="/widerruf"
                 data-testid="agb-widerruf-link"
-                className="text-[#0E6FB3] hover:underline"
+                className="text-[#0A8EDB] hover:underline"
               >
                 {" "}Widerrufsbelehrung
               </a>.
@@ -344,7 +344,7 @@ export default function AGB() {
               versicherung. Details siehe
               <a
                 href="/impressum"
-                className="text-[#0E6FB3] hover:underline"
+                className="text-[#0A8EDB] hover:underline"
               >
                 {" "}Impressum
               </a>.
@@ -382,7 +382,7 @@ export default function AGB() {
               <a
                 href="/datenschutz"
                 data-testid="agb-datenschutz-link"
-                className="text-[#0E6FB3] hover:underline"
+                className="text-[#0A8EDB] hover:underline"
               >
                 {" "}Datenschutzerklärung
               </a>.
@@ -400,7 +400,7 @@ export default function AGB() {
                 href="https://ec.europa.eu/consumers/odr/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#0E6FB3] hover:underline"
+                className="text-[#0A8EDB] hover:underline"
               >
                 {" "}https://ec.europa.eu/consumers/odr/
               </a>.

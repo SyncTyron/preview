@@ -12,10 +12,10 @@ const serviceIcons = [
 
 const iconColors = [
   "text-[#F9B130]",
-  "text-[#0E6FB3]",
+  "text-[#0A8EDB]",
   "text-[#0284C7]",
   "text-[#F9B130]",
-  "text-[#0E6FB3]",
+  "text-[#0A8EDB]",
   "text-[#0284C7]",
 ];
 
@@ -35,7 +35,7 @@ export default function Services() {
     <section id="services" data-testid="services-section" className="py-20 md:py-32 bg-white">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="mb-14 animate-fade-in-up">
-          <span className="text-sm font-bold tracking-[0.2em] uppercase text-[#0E6FB3] font-manrope">
+          <span className="text-sm font-bold tracking-[0.2em] uppercase text-[#0A8EDB] font-manrope">
             {t.services.overline}
           </span>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-[#1C1917] font-outfit mt-3">

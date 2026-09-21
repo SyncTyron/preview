@@ -53,7 +53,7 @@ export default function Bathroom() {
                       loading="lazy"
                     />
                   </div>
-                  <div className="absolute -bottom-4 -right-4 w-28 h-28 bg-[#0E6FB3] rounded-sm hidden lg:flex items-center justify-center p-3">
+                  <div className="absolute -bottom-4 -right-4 w-28 h-28 bg-[#0A8EDB] rounded-sm hidden lg:flex items-center justify-center p-3">
                     <img src="/logo-white.svg" alt="MK Gebäudemanagement Logo" className="w-full h-full object-contain" />
                   </div>
                 </motion.div>
@@ -65,7 +65,7 @@ export default function Bathroom() {
                   transition={{ duration: 0.6 }}
                   className={reverse ? "lg:order-1" : "lg:order-2"}
                 >
-                  <span className="text-sm font-bold tracking-[0.2em] uppercase text-[#0E6FB3] font-manrope">
+                  <span className="text-sm font-bold tracking-[0.2em] uppercase text-[#0A8EDB] font-manrope">
                     {item.tag}
                   </span>
                   <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-[#1C1917] font-outfit mt-3 mb-6">
@@ -76,8 +76,8 @@ export default function Bathroom() {
                   <div className="space-y-4">
                     {item.points.map((point, i) => (
                       <div key={i} className="flex items-start gap-3" data-testid={`detail-${idx}-point-${i}`}>
-                        <div className="w-7 h-7 rounded-full bg-[#0E6FB3]/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <Check size={16} className="text-[#0E6FB3]" />
+                        <div className="w-7 h-7 rounded-full bg-[#0A8EDB]/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <Check size={16} className="text-[#0A8EDB]" />
                         </div>
                         <span className="font-manrope text-[#1C1917]">{point}</span>
                       </div>

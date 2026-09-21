@@ -28,7 +28,7 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div>
-            <span className="text-sm font-bold tracking-[0.2em] uppercase text-[#0E6FB3] font-manrope">
+            <span className="text-sm font-bold tracking-[0.2em] uppercase text-[#0A8EDB] font-manrope">
               {t.about.overline}
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-[#1C1917] font-outfit mt-3 mb-6">
@@ -40,8 +40,8 @@ export default function About() {
             <p className="text-base leading-relaxed text-[#57534E] font-manrope mb-6">
               {t.about.description2}
             </p>
-            <div className="flex items-start gap-3 p-4 bg-[#0E6FB3]/5 rounded-sm border border-[#0E6FB3]/15">
-              <MapPin size={20} className="text-[#0E6FB3] flex-shrink-0 mt-0.5" />
+            <div className="flex items-start gap-3 p-4 bg-[#0A8EDB]/5 rounded-sm border border-[#0A8EDB]/15">
+              <MapPin size={20} className="text-[#0A8EDB] flex-shrink-0 mt-0.5" />
               <p className="text-sm text-[#57534E] font-manrope">{t.about.area}</p>
             </div>
           </div>
@@ -52,7 +52,7 @@ export default function About() {
                 key={i}
                 className="p-8 bg-white rounded-sm border border-[#E7E5E4] hover:shadow-md transition-shadow"
               >
-                <div className="text-[#0E6FB3] mb-4">{item.icon}</div>
+                <div className="text-[#0A8EDB] mb-4">{item.icon}</div>
                 <h3 className="font-outfit font-semibold text-[#1C1917] text-lg mb-2">{item.title}</h3>
                 <p className="text-sm text-[#57534E] font-manrope leading-relaxed">{item.desc}</p>
               </div>

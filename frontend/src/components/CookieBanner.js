@@ -83,7 +83,7 @@ export default function CookieBanner() {
                 <Category icon={<Megaphone size={18} />} title={lbl.marketing || "Marketing"} desc={c.marketingDesc} checked={prefs.marketing} onChange={(v) => setPrefs((p) => ({ ...p, marketing: v }))} testId="pref-marketing" />
               </div>
               <div className="flex flex-col sm:flex-row gap-2 pt-4 border-t border-white/10">
-                <button type="button" onClick={saveSelection} className="flex-1 font-manrope text-sm font-semibold bg-[#0E6FB3] hover:bg-[#0A5A94] text-white px-5 py-2.5 rounded-sm transition-colors" data-testid="cookie-save-btn">{c.saveSelection || "Auswahl speichern"}</button>
+                <button type="button" onClick={saveSelection} className="flex-1 font-manrope text-sm font-semibold bg-[#0A8EDB] hover:bg-[#0873B3] text-white px-5 py-2.5 rounded-sm transition-colors" data-testid="cookie-save-btn">{c.saveSelection || "Auswahl speichern"}</button>
                 <button type="button" onClick={rejectAll} className="flex-1 font-manrope text-sm font-semibold bg-white/10 hover:bg-white/20 text-white px-5 py-2.5 rounded-sm transition-colors border border-white/30">{c.rejectAll || "Nur notwendige"}</button>
                 <button type="button" onClick={acceptAll} className="flex-1 font-manrope text-sm font-semibold bg-white/10 hover:bg-white/20 text-white px-5 py-2.5 rounded-sm transition-colors border border-white/30">{c.acceptAll || "Alle akzeptieren"}</button>
               </div>
@@ -104,7 +104,7 @@ function Category({ icon, title, desc, checked, onChange, locked, testId }) {
           <span className="font-outfit font-semibold text-sm">{title}</span>
           <span className="relative flex-shrink-0">
             <input type="checkbox" checked={checked} disabled={locked} onChange={(e) => onChange(e.target.checked)} className="sr-only peer" data-testid={testId} />
-            <span aria-hidden="true" className={`block w-10 h-5 rounded-full transition-colors ${checked ? "bg-[#0E6FB3]" : "bg-white/20"} ${locked ? "opacity-60" : ""}`} />
+            <span aria-hidden="true" className={`block w-10 h-5 rounded-full transition-colors ${checked ? "bg-[#0A8EDB]" : "bg-white/20"} ${locked ? "opacity-60" : ""}`} />
             <span aria-hidden="true" className={`absolute top-0.5 w-4 h-4 bg-white rounded-full transition-transform ${checked ? "translate-x-5" : "translate-x-0.5"}`} />
           </span>
         </div>

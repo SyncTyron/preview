@@ -25,20 +25,20 @@ section[id] {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #0E6FB3;
+  background: #0A8EDB;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #0A5A94;
+  background: #0873B3;
 }
 
 ::selection {
-  background-color: #0E6FB3;
+  background-color: #0A8EDB;
   color: white;
 }
 
 *:focus-visible {
-  outline: 2px solid #0E6FB3;
+  outline: 2px solid #0A8EDB;
   outline-offset: 2px;
 }

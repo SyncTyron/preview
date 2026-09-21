@@ -40,7 +40,7 @@ export default function Gallery() {
     <section id="gallery" data-testid="gallery-section" className="py-20 md:py-32 bg-[#F5F5F4]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
         <div className="text-center mb-10 md:mb-14 animate-fade-in-up">
-          <span className="text-sm font-bold tracking-[0.2em] uppercase text-[#0e6fb3] font-manrope">
+          <span className="text-sm font-bold tracking-[0.2em] uppercase text-[#0A8EDB] font-manrope">
             {t.gallery.overline}
           </span>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-[#1C1917] font-outfit mt-3 mb-4">

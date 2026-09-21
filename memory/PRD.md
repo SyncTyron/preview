@@ -21,6 +21,7 @@ Rechtliche Seiten (Impressum, Datenschutz, AGB, Widerruf) und Cookie-Banner NICH
 - SchemaOrg.js + public/index.html: SEO/JSON-LD auf MK Gebäudemanagement (Duisburg)
 - Fix: fetchpriority → fetchPriority (React-Warnung)
 - Hero.js: Titel „MK Gebäudemanagement" einzeilig (whitespace-nowrap, Container max-w-3xl, mobil text-3xl)
+- Farben: Hauptfarbe #0E6FB3 → #0A8EDB (Hover #0873B3), CSS-Var --primary/--ring angepasst, theme-color; Header immer weiß mit dunklem Text (Header.js)
 
 ## Bewusst unverändert
 - Impressum/Datenschutz/AGB/Widerruf-Seiten + CookieBanner (noch alte Firma – Kunde aktualisiert)

@@ -24,7 +24,7 @@ export default function FAQ() {
           transition={{ duration: 0.5 }}
           className="text-center mb-14"
         >
-          <span className="text-sm font-bold tracking-[0.2em] uppercase text-[#0E6FB3] font-manrope">
+          <span className="text-sm font-bold tracking-[0.2em] uppercase text-[#0A8EDB] font-manrope">
             {t.faq.overline}
           </span>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-[#1C1917] font-outfit mt-3">
@@ -46,7 +46,7 @@ export default function FAQ() {
                 data-testid={`faq-item-${i}`}
                 className="border-b border-[#E7E5E4]"
               >
-                <AccordionTrigger className="font-outfit font-semibold text-[#1C1917] text-base py-5 hover:no-underline hover:text-[#0E6FB3] transition-colors">
+                <AccordionTrigger className="font-outfit font-semibold text-[#1C1917] text-base py-5 hover:no-underline hover:text-[#0A8EDB] transition-colors">
                   {item.q}
                 </AccordionTrigger>
                 <AccordionContent className="font-manrope text-[#57534E] text-sm leading-relaxed pb-5">

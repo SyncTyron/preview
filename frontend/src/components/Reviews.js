@@ -19,7 +19,7 @@ export default function Reviews() {
           transition={{ duration: 0.5 }}
           className="text-center mb-4"
         >
-          <span className="text-sm font-bold tracking-[0.2em] uppercase text-[#0E6FB3] font-manrope">
+          <span className="text-sm font-bold tracking-[0.2em] uppercase text-[#0A8EDB] font-manrope">
             {t.reviews.overline}
           </span>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-[#1C1917] font-outfit mt-3 mb-4">
@@ -82,8 +82,8 @@ export default function Reviews() {
               {/* Author */}
               <div className="flex items-center justify-between pt-4 border-t border-[#E7E5E4]">
                 <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-full bg-[#0E6FB3]/15 flex items-center justify-center">
-                    <span className="font-outfit font-bold text-[#0E6FB3] text-sm">
+                  <div className="w-9 h-9 rounded-full bg-[#0A8EDB]/15 flex items-center justify-center">
+                    <span className="font-outfit font-bold text-[#0A8EDB] text-sm">
                       {review.name.charAt(0)}
                     </span>
                   </div>
@@ -106,7 +106,7 @@ export default function Reviews() {
             target="_blank"
             rel="noopener noreferrer"
             data-testid="trustpilot-link"
-            className="inline-flex items-center gap-2 font-manrope font-semibold text-sm text-[#0E6FB3] hover:text-[#0A5A94] transition-colors"
+            className="inline-flex items-center gap-2 font-manrope font-semibold text-sm text-[#0A8EDB] hover:text-[#0873B3] transition-colors"
           >
             Alle Bewertungen auf Trustpilot ansehen
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

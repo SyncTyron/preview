@@ -14,7 +14,7 @@ export default function Widerruf() {
         <a
           href="/"
           data-testid="widerruf-back-link"
-          className="inline-flex items-center gap-2 text-[#0E6FB3] hover:text-[#0A5A94] font-manrope font-semibold text-sm mb-8 transition-colors"
+          className="inline-flex items-center gap-2 text-[#0A8EDB] hover:text-[#0873B3] font-manrope font-semibold text-sm mb-8 transition-colors"
         >
           <ArrowLeft size={16} />
           {back}

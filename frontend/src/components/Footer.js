@@ -22,15 +22,15 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="font-outfit font-semibold text-[#F1F5F9] text-base mb-4">{t.contact.overline}</h3>
             <div className="flex items-center gap-3">
-              <Phone size={16} className="text-[#0E6FB3]" />
+              <Phone size={16} className="text-[#0A8EDB]" />
               <a href="tel:+491632106688" className="text-white/95 hover:text-[#7DD3FC] font-manrope text-sm transition-colors" data-testid="footer-phone">+49 163 210 66 88</a>
             </div>
             <div className="flex items-center gap-3">
-              <Mail size={16} className="text-[#0E6FB3]" />
+              <Mail size={16} className="text-[#0A8EDB]" />
               <a href="mailto:info@mk-gebaeudemanagement.de" className="text-white/95 hover:text-[#7DD3FC] font-manrope text-sm transition-colors" data-testid="footer-email">info@mk-gebaeudemanagement.de</a>
             </div>
             <div className="flex items-start gap-3">
-              <MapPin size={16} className="text-[#0E6FB3] mt-0.5" />
+              <MapPin size={16} className="text-[#0A8EDB] mt-0.5" />
               <p className="text-white/95 font-manrope text-sm">Auf dem Damm 112, 47137 Duisburg</p>
             </div>
           </div>

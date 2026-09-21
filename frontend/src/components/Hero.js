@@ -48,7 +48,7 @@ export default function Hero() {
               data-testid="hero-cta-primary"
               type="button"
               onClick={() => scrollTo("#contact")}
-              className="inline-flex items-center gap-2 bg-[#0E6FB3] hover:bg-[#0A5A94] text-white font-manrope font-semibold px-7 py-3.5 rounded-sm transition-transform hover:-translate-y-0.5 hover:shadow-lg"
+              className="inline-flex items-center gap-2 bg-[#0A8EDB] hover:bg-[#0873B3] text-white font-manrope font-semibold px-7 py-3.5 rounded-sm transition-transform hover:-translate-y-0.5 hover:shadow-lg"
             >
               {t.hero.cta}
             </button>

@@ -5,7 +5,7 @@ export default function TrustBadges() {
   const { t } = useLanguage();
 
   const badges = [
-    { icon: <ScrollText size={28} />, title: t.trust.meisterbrief, desc: t.trust.meisterbriefDesc, color: "text-[#0E6FB3]", bg: "bg-[#0E6FB3]/10" },
+    { icon: <ScrollText size={28} />, title: t.trust.meisterbrief, desc: t.trust.meisterbriefDesc, color: "text-[#0A8EDB]", bg: "bg-[#0A8EDB]/10" },
     { icon: <Users size={28} />, title: t.trust.innung, desc: t.trust.innungDesc, color: "text-[#F9B130]", bg: "bg-[#F9B130]/10" },
     { icon: <Building2 size={28} />, title: t.trust.hwk, desc: t.trust.hwkDesc, color: "text-[#0284C7]", bg: "bg-[#0284C7]/10" },
   ];

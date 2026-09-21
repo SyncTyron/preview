@@ -59,8 +59,8 @@ export default function Header({ showBanner = false }) {
       <div
         className={`transition-all duration-300 ${
           scrolled
-            ? "bg-[#FDFBF7]/95 backdrop-blur-md shadow-sm border-b border-[#E7E5E4]"
-            : "bg-[#0F172A]/85 backdrop-blur-md"
+            ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-[#E7E5E4]"
+            : "bg-white border-b border-[#E7E5E4]"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 flex items-center justify-between h-14 sm:h-16 md:h-20">
@@ -78,10 +78,10 @@ export default function Header({ showBanner = false }) {
           >
             <img src="/logo.svg" alt="MK Gebäudemanagement Logo" className="h-8 sm:h-10 md:h-12 w-auto" width="48" height="48" />
             <div className="hidden sm:block">
-              <span className={`font-outfit font-bold text-base sm:text-lg tracking-tight ${scrolled ? "text-[#1C1917]" : "text-white"}`}>
+              <span className={`font-outfit font-bold text-base sm:text-lg tracking-tight text-[#1C1917]`}>
                 MK
               </span>
-              <span className={`font-outfit font-light text-base sm:text-lg ml-1 ${scrolled ? "text-[#57534E]" : "text-white/70"}`}>
+              <span className={`font-outfit font-light text-base sm:text-lg ml-1 text-[#57534E]`}>
                 Gebäudemanagement
               </span>
             </div>
@@ -93,16 +93,14 @@ export default function Header({ showBanner = false }) {
                 key={item.href}
                 onClick={() => scrollTo(item.href)}
                 className={`relative text-sm font-manrope font-medium transition-colors tracking-wide ${
-                  scrolled
-                    ? activeSection === item.id ? "text-[#0E6FB3]" : "text-[#57534E] hover:text-[#0E6FB3]"
-                    : activeSection === item.id ? "text-white" : "text-white/70 hover:text-white"
+                  activeSection === item.id ? "text-[#0A8EDB]" : "text-[#57534E] hover:text-[#0A8EDB]"
                 }`}
               >
                 {item.label}
                 {activeSection === item.id && (
                   <motion.div
                     layoutId="nav-indicator"
-                    className={`absolute -bottom-1 left-0 right-0 h-0.5 rounded-full ${scrolled ? "bg-[#0E6FB3]" : "bg-white"}`}
+                    className={`absolute -bottom-1 left-0 right-0 h-0.5 rounded-full bg-[#0A8EDB]`}
                     transition={{ type: "spring", stiffness: 400, damping: 30 }}
                   />
                 )}
@@ -116,13 +114,11 @@ export default function Header({ showBanner = false }) {
               type="button"
               aria-label={`Sprache wechseln. Aktuelle Sprache: ${lang === "DE" ? "Deutsch" : "Englisch"}`}
               onClick={toggleLang}
-              className={`text-sm font-manrope font-semibold tracking-wider transition-colors ${
-                scrolled ? "text-[#1C1917]" : "text-white"
-              }`}
+              className="text-sm font-manrope font-semibold tracking-wider transition-colors text-[#1C1917]"
             >
-              <span className={lang === "DE" ? (scrolled ? "text-[#0284C7] font-bold" : "text-[#7DD3FC] font-bold") : ""}>DE</span>
-              <span className={`mx-1 ${scrolled ? "text-[#78716C]" : "text-white/60"}`}>|</span>
-              <span className={lang === "EN" ? (scrolled ? "text-[#0284C7] font-bold" : "text-[#7DD3FC] font-bold") : ""}>EN</span>
+              <span className={lang === "DE" ? "text-[#0A8EDB] font-bold" : ""}>DE</span>
+              <span className={`mx-1 text-[#78716C]`}>|</span>
+              <span className={lang === "EN" ? "text-[#0A8EDB] font-bold" : ""}>EN</span>
             </button>
             <button
               data-testid="mobile-menu-toggle"
@@ -131,7 +127,7 @@ export default function Header({ showBanner = false }) {
               aria-expanded={mobileOpen}
               aria-controls="mobile-nav"
               onClick={() => setMobileOpen(!mobileOpen)}
-              className={`md:hidden p-1 ${scrolled ? "text-[#1C1917]" : "text-white"}`}
+              className={`md:hidden p-1 text-[#1C1917]`}
             >
               {mobileOpen ? <X size={22} aria-hidden="true" /> : <Menu size={22} aria-hidden="true" />}
             </button>
@@ -146,7 +142,7 @@ export default function Header({ showBanner = false }) {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden bg-[#FDFBF7] border-b border-[#E7E5E4] overflow-hidden"
+              className="md:hidden bg-white border-b border-[#E7E5E4] overflow-hidden"
             >
               <div className="px-4 sm:px-6 py-3 flex flex-col gap-1">
                 {navItems.map((item) => (
@@ -155,8 +151,8 @@ export default function Header({ showBanner = false }) {
                     onClick={() => scrollTo(item.href)}
                     className={`text-left text-base font-manrope font-medium transition-colors py-2.5 px-3 rounded-sm ${
                       activeSection === item.id
-                        ? "text-[#0E6FB3] bg-[#0E6FB3]/5"
-                        : "text-[#57534E] hover:text-[#0E6FB3]"
+                        ? "text-[#0A8EDB] bg-[#0A8EDB]/5"
+                        : "text-[#57534E] hover:text-[#0A8EDB]"
                     }`}
                   >
                     {item.label}

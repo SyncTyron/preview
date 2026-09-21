@@ -36,7 +36,7 @@ body {
     --card-foreground: 20 14% 9%;
     --popover: 0 0% 100%;
     --popover-foreground: 20 14% 9%;
-    --primary: 207 85% 38%;
+    --primary: 202 91% 45%;
     --primary-foreground: 0 0% 100%;
     --secondary: 30 6% 96%;
     --secondary-foreground: 20 14% 9%;
@@ -48,7 +48,7 @@ body {
     --destructive-foreground: 0 0% 98%;
     --border: 30 6% 90%;
     --input: 30 6% 90%;
-    --ring: 207 85% 38%;
+    --ring: 202 91% 45%;
     --chart-1: 16 76% 47%;
     --chart-2: 173 58% 39%;
     --chart-3: 222 47% 11%;
@@ -136,7 +136,7 @@ body {
 
 @layer base {
   :focus-visible {
-    outline: 2px solid #0E6FB3;
+    outline: 2px solid #0A8EDB;
     outline-offset: 2px;
     border-radius: 2px;
   }
@@ -163,7 +163,7 @@ body {
   left: 1rem;
   width: auto;
   height: auto;
-  background: #0E6FB3;
+  background: #0A8EDB;
   color: #fff;
   padding: 0.75rem 1.25rem;
   border-radius: 4px;

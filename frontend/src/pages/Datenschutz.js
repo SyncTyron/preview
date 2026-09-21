@@ -13,7 +13,7 @@ export default function Datenschutz() {
     <div data-testid="datenschutz-page" className="min-h-screen bg-[#FDFBF7]">
       <SeoHelmet title={"Datenschutzerklärung"} description={"Datenschutzerklärung der Roda Haustechnik nach DSGVO und TTDSG."} path={"/datenschutz"} />
       <div className="max-w-3xl mx-auto px-6 md:px-12 py-24">
-        <a href="/" data-testid="datenschutz-back-link" className="inline-flex items-center gap-2 text-[#0E6FB3] hover:text-[#0A5A94] font-manrope font-semibold text-sm mb-8 transition-colors"><ArrowLeft size={16} />{back}</a>
+        <a href="/" data-testid="datenschutz-back-link" className="inline-flex items-center gap-2 text-[#0A8EDB] hover:text-[#0873B3] font-manrope font-semibold text-sm mb-8 transition-colors"><ArrowLeft size={16} />{back}</a>
         <h1 className="text-3xl sm:text-4xl font-black tracking-tight text-[#1C1917] font-outfit mb-4">Datenschutzerklärung</h1>
         <p className="text-sm text-[#78716C] mb-8">Stand: <span>April 2026</span></p>
         <div className="font-manrope text-[#57534E] leading-relaxed space-y-7">
@@ -49,7 +49,7 @@ export default function Datenschutz() {
           <section>
             <h2 className="font-outfit font-bold text-[#1C1917] text-xl mb-3">5. Cookies und ähnliche Technologien</h2>
             <p>Wir setzen Cookies und vergleichbare Technologien ein. Rechtsgrundlage für nicht notwendige Cookies: <strong>§ 25 TTDSG</strong> i. V. m. Art. 6 Abs. 1 lit. a DSGVO (Einwilligung). Für technisch notwendige Cookies: <strong>§ 25 Abs. 2 Nr. 2 TTDSG</strong>.</p>
-            <button type="button" onClick={openCookies} data-testid="datenschutz-open-cookies-btn" className="inline-flex items-center gap-2 mt-3 px-4 py-2 bg-[#0E6FB3] hover:bg-[#0A5A94] text-white text-sm font-semibold rounded-sm transition-colors"><Settings2 size={14} />Cookie-Einstellungen öffnen</button>
+            <button type="button" onClick={openCookies} data-testid="datenschutz-open-cookies-btn" className="inline-flex items-center gap-2 mt-3 px-4 py-2 bg-[#0A8EDB] hover:bg-[#0873B3] text-white text-sm font-semibold rounded-sm transition-colors"><Settings2 size={14} />Cookie-Einstellungen öffnen</button>
             <div className="mt-5 space-y-5">
               <div>
                 <h3 className="font-outfit font-semibold text-[#1C1917] text-base mb-1">5.1 Notwendige Cookies</h3>

@@ -12,7 +12,7 @@ export default function Impressum() {
     <div data-testid="impressum-page" className="min-h-screen bg-[#FDFBF7]">
       <SeoHelmet title={"Impressum"} description={"Impressum der Roda Haustechnik – Marco Nobis, SHK-Meisterbetrieb in Herzogenrath."} path={"/impressum"} />
       <div className="max-w-3xl mx-auto px-6 md:px-12 py-24">
-        <a href="/" data-testid="impressum-back-link" className="inline-flex items-center gap-2 text-[#0E6FB3] hover:text-[#0A5A94] font-manrope font-semibold text-sm mb-8 transition-colors">
+        <a href="/" data-testid="impressum-back-link" className="inline-flex items-center gap-2 text-[#0A8EDB] hover:text-[#0873B3] font-manrope font-semibold text-sm mb-8 transition-colors">
           <ArrowLeft size={16} />{back}
         </a>
         <h1 className="text-3xl sm:text-4xl font-black tracking-tight text-[#1C1917] font-outfit mb-8">Impressum</h1>
@@ -28,9 +28,9 @@ export default function Impressum() {
           <section>
             <h2 className="font-outfit font-bold text-[#1C1917] text-xl mb-3">Berufsbezeichnung und berufsrechtliche Regelungen</h2>
             <p><strong>Berufsbezeichnung:</strong><br />Installateur- und Heizungsbauermeister – Sanitär, Heizung und Klima<br />Verliehen in der Bundesrepublik Deutschland</p>
-            <p className="mt-3"><strong>Zuständige Aufsichts- und Zulassungsbehörde / Kammer:</strong><br />Handwerkskammer Aachen<br />Sandkaulbach 21<br />52062 Aachen<br /><a href="https://www.hwk-aachen.de" target="_blank" rel="noopener noreferrer" className="text-[#0E6FB3] hover:underline">www.hwk-aachen.de</a></p>
+            <p className="mt-3"><strong>Zuständige Aufsichts- und Zulassungsbehörde / Kammer:</strong><br />Handwerkskammer Aachen<br />Sandkaulbach 21<br />52062 Aachen<br /><a href="https://www.hwk-aachen.de" target="_blank" rel="noopener noreferrer" className="text-[#0A8EDB] hover:underline">www.hwk-aachen.de</a></p>
             <p className="mt-3"><strong>Eintrag in die Handwerksrolle:</strong><br />Handwerkskammer Aachen — Betriebsnummer:&nbsp;<span className={PH}>[Platzhalter: HWK-Betriebsnummer z. B. 12345-67]</span></p>
-            <p className="mt-3"><strong>Berufsrechtliche Regelungen:</strong> Handwerksordnung (HwO); einsehbar unter <a href="https://www.gesetze-im-internet.de/hwo/" target="_blank" rel="noopener noreferrer" className="text-[#0E6FB3] hover:underline">gesetze-im-internet.de/hwo</a></p>
+            <p className="mt-3"><strong>Berufsrechtliche Regelungen:</strong> Handwerksordnung (HwO); einsehbar unter <a href="https://www.gesetze-im-internet.de/hwo/" target="_blank" rel="noopener noreferrer" className="text-[#0A8EDB] hover:underline">gesetze-im-internet.de/hwo</a></p>
           </section>
           <section>
             <h2 className="font-outfit font-bold text-[#1C1917] text-xl mb-3">Umsatzsteuer-ID</h2>
@@ -46,7 +46,7 @@ export default function Impressum() {
           </section>
           <section>
             <h2 className="font-outfit font-bold text-[#1C1917] text-xl mb-3">Streitbeilegung</h2>
-            <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer" className="text-[#0E6FB3] hover:underline">https://ec.europa.eu/consumers/odr/</a>. Unsere E-Mail-Adresse finden Sie oben im Impressum.</p>
+            <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer" className="text-[#0A8EDB] hover:underline">https://ec.europa.eu/consumers/odr/</a>. Unsere E-Mail-Adresse finden Sie oben im Impressum.</p>
             <p className="mt-3">Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen (§ 36 VSBG).</p>
           </section>
           <section>
