@@ -1,0 +1,44 @@
+/* Roda Haustechnik - Custom Styles */
+
+html {
+  scroll-behavior: smooth;
+}
+
+.font-outfit {
+  font-family: "Outfit", sans-serif;
+}
+
+.font-manrope {
+  font-family: "Manrope", sans-serif;
+}
+
+section[id] {
+  scroll-margin-top: 80px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FDFBF7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0E6FB3;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0A5A94;
+}
+
+::selection {
+  background-color: #0E6FB3;
+  color: white;
+}
+
+*:focus-visible {
+  outline: 2px solid #0E6FB3;
+  outline-offset: 2px;
+}

@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Contact: kontakt@roda-haustechnik.de
+Preferred-Citation: Roda Haustechnik - SHK-Meisterbetrieb in Herzogenrath
+Address: Schillerstr. 14, 52134 Herzogenrath, Deutschland
+Phone: +49 152 2100 6829
+Service-Area: Herzogenrath und 20 km Umkreis (NRW, Deutschland)
+Languages: de, en
