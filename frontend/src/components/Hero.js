@@ -1,8 +1,23 @@
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
 import { Phone, ArrowDown } from "lucide-react";
 
+const heroSlides = [
+  { src: "/img/clean-hero.jpg", alt: "Professionelle Gebäudereinigung – Reinigungskraft bei der Arbeit in einem modernen Büro" },
+  { src: "/img/detail-gruenflaeche.jpg", alt: "Grünflächenpflege – gepflegte Rasenfläche mit Bäumen und Beeten" },
+  { src: "/img/detail-winter.jpg", alt: "Winterdienst – geräumte Straße bei Schnee und Sonnenaufgang" },
+];
+
 export default function Hero() {
   const { t } = useLanguage();
+  const [slide, setSlide] = useState(0);
+
+  useEffect(() => {
+    heroSlides.slice(1).forEach((s) => { const img = new Image(); img.src = s.src; });
+    const id = setInterval(() => setSlide((i) => (i + 1) % heroSlides.length), 6000);
+    return () => clearInterval(id);
+  }, []);
 
   const scrollTo = (href) => {
     const el = document.querySelector(href);
@@ -15,16 +30,23 @@ export default function Hero() {
       data-testid="hero-section"
       className="relative min-h-screen flex items-center overflow-hidden"
     >
-      <div className="absolute inset-0">
-        <img
-          src="/img/clean-hero.jpg"
-          alt="Professionelle Gebäudereinigung – Reinigungskraft bei der Arbeit in einem modernen Büro"
-          className="w-full h-full object-cover"
-          width="1920"
-          height="1080"
-          fetchPriority="high"
-          decoding="async"
-        />
+      <div className="absolute inset-0 bg-[#0F172A]" data-testid="hero-slideshow" data-slide={slide}>
+        <AnimatePresence initial={false}>
+          <motion.img
+            key={slide}
+            src={heroSlides[slide].src}
+            alt={heroSlides[slide].alt}
+            className="absolute inset-0 w-full h-full object-cover"
+            width="1920"
+            height="1080"
+            fetchPriority="high"
+            decoding="async"
+            initial={{ x: "100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "-100%" }}
+            transition={{ duration: 1, ease: [0.32, 0.72, 0, 1] }}
+          />
+        </AnimatePresence>
         <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A]/85 via-[#0F172A]/60 to-[#0F172A]/20" />
       </div>
 
