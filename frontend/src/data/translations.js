@@ -41,6 +41,7 @@ const translations = {
     services: {
       overline: "Unsere Leistungen",
       title: "Was wir für Sie tun",
+      sliderHint: "Tipp: Über den Button „Kontakt aufnehmen“ in der jeweiligen Karte gelangen Sie direkt zum Kontaktformular – die passende Leistung ist dort bereits automatisch als Betreff ausgewählt.",
       items: [
         {
           title: "Gebäudereinigung",
@@ -267,6 +268,7 @@ const translations = {
     services: {
       overline: "Our Services",
       title: "What We Do For You",
+      sliderHint: "Tip: The “Get in Touch” button in each card takes you straight to the contact form – the matching service is already preselected as the subject.",
       items: [
         {
           title: "Building Cleaning",

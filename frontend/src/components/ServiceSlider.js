@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Check, Building2, Sprout, Snowflake, ArrowRight } from "lucide-react";
+import { Check, Building2, Sprout, Snowflake, ArrowRight, Info } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
 import { CONTACT_SUBJECTS, SUBJECT_EVENT } from "../data/subjects";
 
@@ -136,16 +136,10 @@ export default function ServiceSlider() {
         })}
       </div>
 
-      <div className="mt-6 flex items-center gap-5" data-testid="service-slider-progress">
-        <span className="font-manrope text-sm font-bold tracking-[0.2em] text-[#1C1917]">0{active + 1}</span>
-        <div className="relative flex-1 h-1 rounded-full bg-[#E7E5E4] overflow-hidden">
-          <div
-            className="absolute inset-y-0 left-0 rounded-full bg-[#0A8EDB]"
-            style={{ width: `${((active + 1) / items.length) * 100}%`, transition: "width 0.7s cubic-bezier(0.32, 0.72, 0, 1)" }}
-          />
-        </div>
-        <span className="font-manrope text-sm font-bold tracking-[0.2em] text-[#78716C]">0{items.length}</span>
-      </div>
+      <p className="mt-6 flex items-start gap-3 font-manrope text-sm text-[#57534E] leading-relaxed max-w-3xl" data-testid="service-slider-hint">
+        <Info size={18} className="text-[#0A8EDB] flex-shrink-0 mt-0.5" aria-hidden="true" />
+        <span>{t.services.sliderHint}</span>
+      </p>
     </div>
   );
 }
