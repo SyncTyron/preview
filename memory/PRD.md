@@ -27,6 +27,7 @@ Rechtliche Seiten (Impressum, Datenschutz, AGB, Widerruf) und Cookie-Banner NICH
 - ServiceSlider: Auto-Play alle 6 s, pausiert bei Hover/Fokus (data-paused)
 - server.py: alle Mail-Texte (Absendername, Admin-Mail-Fußzeile, Bestätigungs-Mail plain+HTML, Footer, Farben #0A8EDB) auf MK Gebäudemanagement (Auf dem Damm 112, 47137 Duisburg, +49 163 210 66 88, mk-gebaeudemanagement.de); Root-Message umbenannt. mail-logo.png noch alt (Kunde tauscht)
 - ServiceSlider: Nummerierungs-/Fortschrittsleiste ersetzt durch Hinweistext (t.services.sliderHint, DE/EN) mit Info-Icon: „Kontakt aufnehmen“-Button führt zum Formular, Betreff vorausgewählt
+- TrustBadges.js (3 Vorteils-Kacheln) entfernt; Services-Sektion jetzt bg-[#F5F5F4] mit border-y (ehem. TrustBadges-Look), Gallery/Referenzen jetzt bg-white
 - Farben: Hauptfarbe #0E6FB3 → #0A8EDB (Hover #0873B3), CSS-Var --primary/--ring angepasst, theme-color; Header immer weiß mit dunklem Text (Header.js)
 
 ## Bewusst unverändert

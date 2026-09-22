@@ -5,7 +5,6 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import { lazy, Suspense } from "react";
 const About = lazy(() => import("./components/About"));
-const TrustBadges = lazy(() => import("./components/TrustBadges"));
 const Services = lazy(() => import("./components/Services"));
 const Gallery = lazy(() => import("./components/Gallery"));
 const FAQ = lazy(() => import("./components/FAQ"));
@@ -33,7 +32,6 @@ function LandingPage() {
         <Hero />
         <Suspense fallback={null}>
           <About />
-          <TrustBadges />
           <Services />
           <Gallery />
           <FAQ />
