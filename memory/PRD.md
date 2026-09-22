@@ -22,6 +22,7 @@ Rechtliche Seiten (Impressum, Datenschutz, AGB, Widerruf) und Cookie-Banner NICH
 - Fix: fetchpriority → fetchPriority (React-Warnung)
 - Hero.js: Titel „MK Gebäudemanagement" einzeilig (whitespace-nowrap, Container max-w-3xl, mobil text-3xl)
 - Leistungen: Detailabschnitte (Gebäudereinigung/Grünflächenpflege/Winterdienst) in Services-Sektion als interaktiver Expanding-Card-Slider (ServiceSlider.js, Klick zum Aufklappen, Fortschrittsbalken; mobil vertikal). Bathroom.js entfernt, Nav-Punkt „Gebäudereinigung" entfernt; Grid zeigt nur noch 3 weitere Leistungen
+- Kontaktformular: Pflichtfeld „Betreff" als Dropdown (Gebäudereinigung/Grünflächenpflege/Winterdienst/Individuelles Anliegen, data/subjects.js); Slider-CTA setzt Betreff automatisch per CustomEvent; Backend speichert `subject` und nutzt es in der Admin-Mail-Betreffzeile („{Betreff} – Kontaktanfrage von {Name}")
 - Farben: Hauptfarbe #0E6FB3 → #0A8EDB (Hover #0873B3), CSS-Var --primary/--ring angepasst, theme-color; Header immer weiß mit dunklem Text (Header.js)
 
 ## Bewusst unverändert

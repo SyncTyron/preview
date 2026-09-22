@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Check, Building2, Sprout, Snowflake, ArrowRight } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
+import { CONTACT_SUBJECTS, SUBJECT_EVENT } from "../data/subjects";
 
 const slideImages = [
   { src: "/img/detail-gebaeudereinigung.jpg", alt: "Reinigungskraft reinigt den Boden eines Gebäudes" },
@@ -16,7 +17,8 @@ export default function ServiceSlider() {
   const items = t.details.items;
   const [active, setActive] = useState(0);
 
-  const scrollToContact = () => {
+  const scrollToContact = (idx) => {
+    window.dispatchEvent(new CustomEvent(SUBJECT_EVENT, { detail: CONTACT_SUBJECTS[idx] }));
     document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
   };
 
@@ -107,7 +109,7 @@ export default function ServiceSlider() {
                     </ul>
                     <button
                       type="button"
-                      onClick={(e) => { e.stopPropagation(); scrollToContact(); }}
+                      onClick={(e) => { e.stopPropagation(); scrollToContact(idx); }}
                       data-testid={`service-slide-cta-${idx}`}
                       className="inline-flex items-center gap-2 bg-[#0A8EDB] hover:bg-[#0873B3] text-white font-manrope font-semibold px-6 py-3 rounded-sm transition-all hover:-translate-y-0.5 hover:shadow-lg active:scale-95"
                     >

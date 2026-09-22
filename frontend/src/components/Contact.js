@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLanguage } from "../context/LanguageContext";
 import { motion } from "framer-motion";
 import { Input } from "../components/ui/input";
@@ -7,18 +7,25 @@ import { Textarea } from "../components/ui/textarea";
 import { Button } from "../components/ui/button";
 import { Phone, Mail, MapPin, Send, CheckCircle, AlertCircle } from "lucide-react";
 import axios from "axios";
+import { CONTACT_SUBJECTS, SUBJECT_EVENT } from "../data/subjects";
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
 
 export default function Contact() {
   const { t } = useLanguage();
-  const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", phone: "", subject: "", message: "" });
   const [consent, setConsent] = useState(false);
   const [status, setStatus] = useState(null);
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+
+  useEffect(() => {
+    const onSubject = (e) => setForm((prev) => ({ ...prev, subject: e.detail }));
+    window.addEventListener(SUBJECT_EVENT, onSubject);
+    return () => window.removeEventListener(SUBJECT_EVENT, onSubject);
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -28,7 +35,7 @@ export default function Contact() {
     try {
       await axios.post(`${API}/contact`, form);
       setStatus("success");
-      setForm({ name: "", email: "", phone: "", message: "" });
+      setForm({ name: "", email: "", phone: "", subject: "", message: "" });
       setConsent(false);
     } catch {
       setStatus("error");
@@ -98,6 +105,15 @@ export default function Contact() {
               <div>
                 <Label htmlFor="phone" className="font-manrope font-medium text-[#1C1917] mb-2 block">{t.contact.phone}</Label>
                 <Input id="phone" name="phone" type="tel" data-testid="contact-input-phone" value={form.phone} onChange={handleChange} className="bg-white border-[#E7E5E4] font-manrope focus-visible:ring-[#0A8EDB]" />
+              </div>
+              <div>
+                <Label htmlFor="subject" className="font-manrope font-medium text-[#1C1917] mb-2 block">{t.contact.subject} *</Label>
+                <select id="subject" name="subject" data-testid="contact-select-subject" value={form.subject} onChange={handleChange} required className="flex h-10 w-full rounded-md border border-[#E7E5E4] bg-white px-3 py-2 text-sm font-manrope text-[#1C1917] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0A8EDB] focus-visible:ring-offset-2 cursor-pointer">
+                  <option value="" disabled>{t.contact.subjectPlaceholder}</option>
+                  {CONTACT_SUBJECTS.map((value, i) => (
+                    <option key={value} value={value}>{t.contact.subjectOptions[i]}</option>
+                  ))}
+                </select>
               </div>
               <div>
                 <Label htmlFor="message" className="font-manrope font-medium text-[#1C1917] mb-2 block">{t.contact.message} *</Label>

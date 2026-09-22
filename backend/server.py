@@ -40,6 +40,7 @@ class ContactMessage(BaseModel):
     name: str
     email: str
     phone: Optional[str] = ""
+    subject: Optional[str] = ""
     message: str
     created_at: str = Field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
 
@@ -48,6 +49,7 @@ class ContactMessageCreate(BaseModel):
     name: str = Field(..., min_length=1)
     email: str = Field(..., min_length=1)
     phone: Optional[str] = ""
+    subject: Optional[str] = ""
     message: str = Field(..., min_length=1)
 
 
@@ -92,7 +94,7 @@ def _smtp_send(to_addr: str, subject: str, plain_body: str,
     return True
 
 
-def send_admin_notification(name: str, email: str, phone: str, message: str):
+def send_admin_notification(name: str, email: str, phone: str, message: str, subject: str = ""):
     try:
         contact_email = os.environ.get("CONTACT_EMAIL")
         body = f"""Neue Website-Kontaktanfrage:
@@ -100,6 +102,7 @@ def send_admin_notification(name: str, email: str, phone: str, message: str):
 Name:    {name}
 E-Mail:  {email}
 Telefon: {phone or 'Nicht angegeben'}
+Betreff: {subject or 'Nicht angegeben'}
 
 Nachricht:
 {message}
@@ -109,7 +112,8 @@ Diese E-Mail wurde automatisch vom Kontaktformular auf
 https://roda-haustechnik.de gesendet. Auf "Antworten" klicken,
 um direkt an den Absender zu antworten.
 """
-        if _smtp_send(contact_email, f"Website Kontaktanfrage von {name}", body, reply_to=email):
+        mail_subject = f"{subject} – Kontaktanfrage von {name}" if subject else f"Website Kontaktanfrage von {name}"
+        if _smtp_send(contact_email, mail_subject, body, reply_to=email):
             logger.info(f"Admin-Benachrichtigung gesendet fuer {name}")
     except Exception as e:
         logger.error(f"Admin-Mail fehlgeschlagen: {e}")
@@ -216,7 +220,7 @@ async def create_contact(input_data: ContactMessageCreate):
     await db.contact_messages.insert_one(doc)
     doc.pop("_id", None)
 
-    send_admin_notification(input_data.name, input_data.email, input_data.phone, input_data.message)
+    send_admin_notification(input_data.name, input_data.email, input_data.phone, input_data.message, input_data.subject)
     send_customer_confirmation(input_data.name, input_data.email, input_data.message)
 
     return contact
