@@ -68,7 +68,7 @@ def _smtp_send(to_addr: str, subject: str, plain_body: str,
 
     # mixed -> related (bilder) -> alternative (plain/html)
     msg_root = MIMEMultipart("related")
-    msg_root["From"] = formataddr(("Roda Haustechnik", contact_email))
+    msg_root["From"] = formataddr(("MK Gebäudemanagement", contact_email))
     msg_root["To"] = to_addr
     msg_root["Subject"] = subject
     if reply_to:
@@ -109,7 +109,7 @@ Nachricht:
 
 ---
 Diese E-Mail wurde automatisch vom Kontaktformular auf
-https://roda-haustechnik.de gesendet. Auf "Antworten" klicken,
+https://mk-gebaeudemanagement.de gesendet. Auf "Antworten" klicken,
 um direkt an den Absender zu antworten.
 """
         mail_subject = f"{subject} – Kontaktanfrage von {name}" if subject else f"Website Kontaktanfrage von {name}"
@@ -122,17 +122,17 @@ um direkt an den Absender zu antworten.
 def send_customer_confirmation(name: str, email: str, message: str):
     try:
         contact_email = os.environ.get("CONTACT_EMAIL")
-        logo_cid = make_msgid(domain="roda-haustechnik.de")[1:-1]  # ohne <>
+        logo_cid = make_msgid(domain="mk-gebaeudemanagement.de")[1:-1]  # ohne <>
 
         plain = f"""Hallo {name},
 
-vielen Dank für Ihre Anfrage bei Roda Haustechnik!
+vielen Dank für Ihre Anfrage bei MK Gebäudemanagement!
 
 Wir haben Ihre Nachricht erhalten und melden uns innerhalb von 24
 Stunden (an Werktagen) persönlich bei Ihnen zurück.
 
-Bei dringenden Anliegen oder unserem 24/7 Notdienst erreichen Sie
-uns sofort unter:  +49 152 2100 6829
+Bei dringenden Anliegen erreichen Sie uns direkt unter:
++49 163 210 66 88
 
 ------------------------------------------------------------------
 Ihre Nachricht an uns:
@@ -141,12 +141,12 @@ Ihre Nachricht an uns:
 ------------------------------------------------------------------
 
 Mit freundlichen Grüßen
-Marco Nobis
-Roda Haustechnik · SHK-Meisterbetrieb
+Ihr Team von MK Gebäudemanagement
+Gebäudereinigung · Grünflächenpflege · Winterdienst
 
-Schillerstr. 14 · 52134 Herzogenrath
-Tel:  +49 152 2100 6829
-Web:  https://roda-haustechnik.de
+Auf dem Damm 112 · 47137 Duisburg
+Tel:  +49 163 210 66 88
+Web:  https://mk-gebaeudemanagement.de
 Mail: {contact_email}
 
 Diese E-Mail wurde automatisch erzeugt – bitte antworten Sie
@@ -165,11 +165,11 @@ direkt auf diese Nachricht, wir lesen jede Antwort.
           <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
             <tr>
               <td style="vertical-align:middle;padding-right:14px;line-height:0;">
-                <img src="cid:{logo_cid}" width="36" height="48" alt="Roda Haustechnik Logo" style="display:block;height:48px;width:auto;border:0;outline:none;">
+                <img src="cid:{logo_cid}" width="36" height="48" alt="MK Gebäudemanagement Logo" style="display:block;height:48px;width:auto;border:0;outline:none;">
               </td>
               <td style="vertical-align:middle;">
-                <h1 style="margin:0;font-size:22px;color:#0E6FB3;font-weight:700;letter-spacing:-.01em;line-height:1.1;">Roda Haustechnik</h1>
-                <p style="margin:4px 0 0;color:#000000;font-size:14px;line-height:1.2;">Heizung, Sanit&auml;r &amp; Badsanierung</p>
+                <h1 style="margin:0;font-size:22px;color:#0A8EDB;font-weight:700;letter-spacing:-.01em;line-height:1.1;">MK Geb&auml;udemanagement</h1>
+                <p style="margin:4px 0 0;color:#000000;font-size:14px;line-height:1.2;">Geb&auml;udereinigung &middot; Gr&uuml;nfl&auml;chenpflege &middot; Winterdienst</p>
               </td>
             </tr>
           </table>
@@ -180,19 +180,19 @@ direkt auf diese Nachricht, wir lesen jede Antwort.
             vielen Dank für Ihre Anfrage &ndash; wir haben sie erhalten und melden uns
             <strong>schnellstmöglich</strong> persönlich bei Ihnen zurück.
           </p>
-          <div style="margin:24px 0;padding:16px 20px;background:#FFF5E6;border-left:4px solid #F9B130;border-radius:4px;">
+          <div style="margin:24px 0;padding:16px 20px;background:#EAF6FD;border-left:4px solid #0A8EDB;border-radius:4px;">
             <p style="margin:0;font-size:14px;line-height:1.5;">
-              <strong>Es brennt? 24/7 Notdienst:</strong><br>
-              <a href="tel:+4915221006829" style="color:#0E6FB3;text-decoration:none;font-weight:600;font-size:18px;">&#128222; +49 152 2100 6829</a>
+              <strong>Sie haben Fragen? Rufen Sie uns gerne an:</strong><br>
+              <a href="tel:+491632106688" style="color:#0A8EDB;text-decoration:none;font-weight:600;font-size:18px;">&#128222; +49 163 210 66 88</a>
             </p>
           </div>
           <p style="margin:24px 0 8px;font-size:13px;color:#737373;text-transform:uppercase;letter-spacing:.06em;">Ihre Nachricht an uns</p>
           <div style="background:#F5F5F4;padding:16px 20px;border-radius:8px;font-size:14px;line-height:1.55;white-space:pre-wrap;">{message}</div>
-          <p style="margin:32px 0 0;font-size:15px;">Mit freundlichen Grüßen<br><strong>Marco Nobis</strong><br><span style="color:#737373;">Roda Haustechnik</span></p>
+          <p style="margin:32px 0 0;font-size:15px;">Mit freundlichen Grüßen<br><strong>Ihr Team von MK Geb&auml;udemanagement</strong><br><span style="color:#737373;">Geb&auml;udereinigung &middot; Gr&uuml;nfl&auml;chenpflege &middot; Winterdienst</span></p>
         </td></tr>
         <tr><td style="background:#F5F5F4;padding:20px 32px;font-size:12px;color:#737373;line-height:1.5;">
-          Roda Haustechnik &middot; Schillerstr. 14 &middot; 52134 Herzogenrath &middot;
-          <a href="https://roda-haustechnik.de" style="color:#0E6FB3;">roda-haustechnik.de</a><br>
+          MK Geb&auml;udemanagement &middot; Auf dem Damm 112 &middot; 47137 Duisburg &middot;
+          <a href="https://mk-gebaeudemanagement.de" style="color:#0A8EDB;">mk-gebaeudemanagement.de</a><br>
           Diese E-Mail wurde automatisch erzeugt &ndash; Sie können direkt auf diese Nachricht antworten.
         </td></tr>
       </table>
@@ -200,7 +200,7 @@ direkt auf diese Nachricht, wir lesen jede Antwort.
   </table>
 </body></html>"""
 
-        if _smtp_send(email, "Wir haben Ihre Anfrage erhalten - Roda Haustechnik",
+        if _smtp_send(email, "Wir haben Ihre Anfrage erhalten - MK Gebäudemanagement",
                       plain, html_body=html,
                       inline_image_path=LOGO_PATH, inline_image_cid=logo_cid):
             logger.info(f"Eingangsbestaetigung an {email} gesendet")
@@ -210,7 +210,7 @@ direkt auf diese Nachricht, wir lesen jede Antwort.
 
 @api_router.get("/")
 async def root():
-    return {"message": "Roda Haustechnik API"}
+    return {"message": "MK Gebäudemanagement API"}
 
 
 @api_router.post("/contact", response_model=ContactMessage)

@@ -24,6 +24,8 @@ Rechtliche Seiten (Impressum, Datenschutz, AGB, Widerruf) und Cookie-Banner NICH
 - Leistungen: Detailabschnitte (Gebäudereinigung/Grünflächenpflege/Winterdienst) in Services-Sektion als interaktiver Expanding-Card-Slider (ServiceSlider.js, Klick zum Aufklappen, Fortschrittsbalken; mobil vertikal). Bathroom.js entfernt, Nav-Punkt „Gebäudereinigung" entfernt; Grid zeigt nur noch 3 weitere Leistungen
 - Kontaktformular: Pflichtfeld „Betreff" als Dropdown (Gebäudereinigung/Grünflächenpflege/Winterdienst/Individuelles Anliegen, data/subjects.js); Slider-CTA setzt Betreff automatisch per CustomEvent; Backend speichert `subject` und nutzt es in der Admin-Mail-Betreffzeile („{Betreff} – Kontaktanfrage von {Name}")
 - Services.js: die 3 kleinen Leistungs-Kacheln unter dem Slider entfernt – Sektion besteht nur noch aus Überschrift + Slider
+- ServiceSlider: Auto-Play alle 6 s, pausiert bei Hover/Fokus (data-paused)
+- server.py: alle Mail-Texte (Absendername, Admin-Mail-Fußzeile, Bestätigungs-Mail plain+HTML, Footer, Farben #0A8EDB) auf MK Gebäudemanagement (Auf dem Damm 112, 47137 Duisburg, +49 163 210 66 88, mk-gebaeudemanagement.de); Root-Message umbenannt. mail-logo.png noch alt (Kunde tauscht)
 - Farben: Hauptfarbe #0E6FB3 → #0A8EDB (Hover #0873B3), CSS-Var --primary/--ring angepasst, theme-color; Header immer weiß mit dunklem Text (Header.js)
 
 ## Bewusst unverändert

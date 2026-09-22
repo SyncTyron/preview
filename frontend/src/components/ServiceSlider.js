@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Check, Building2, Sprout, Snowflake, ArrowRight } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
@@ -16,6 +16,13 @@ export default function ServiceSlider() {
   const { t } = useLanguage();
   const items = t.details.items;
   const [active, setActive] = useState(0);
+  const [paused, setPaused] = useState(false);
+
+  useEffect(() => {
+    if (paused) return;
+    const id = setInterval(() => setActive((a) => (a + 1) % items.length), 6000);
+    return () => clearInterval(id);
+  }, [paused, active, items.length]);
 
   const scrollToContact = (idx) => {
     window.dispatchEvent(new CustomEvent(SUBJECT_EVENT, { detail: CONTACT_SUBJECTS[idx] }));
@@ -28,6 +35,11 @@ export default function ServiceSlider() {
         className="flex flex-col md:flex-row gap-3 h-[720px] md:h-[560px] lg:h-[600px]"
         role="tablist"
         aria-label={t.services.overline}
+        onMouseEnter={() => setPaused(true)}
+        onMouseLeave={() => setPaused(false)}
+        onFocus={() => setPaused(true)}
+        onBlur={() => setPaused(false)}
+        data-paused={paused}
       >
         {items.map((item, idx) => {
           const isActive = idx === active;
