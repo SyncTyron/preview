@@ -23,7 +23,7 @@ export default function ServiceSlider() {
   };
 
   return (
-    <div data-testid="service-slider" className="mb-8">
+    <div data-testid="service-slider">
       <div
         className="flex flex-col md:flex-row gap-3 h-[720px] md:h-[560px] lg:h-[600px]"
         role="tablist"

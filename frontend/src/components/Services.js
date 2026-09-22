@@ -1,9 +1,6 @@
 import { useLanguage } from "../context/LanguageContext";
-import { Sparkles, Brush, ClipboardList } from "lucide-react";
 import ServiceSlider from "./ServiceSlider";
 
-const serviceIcons = [<Sparkles size={32} />, <Brush size={32} />, <ClipboardList size={32} />];
-const iconColors = ["text-[#F9B130]", "text-[#0A8EDB]", "text-[#0284C7]"];
 
 export default function Services() {
   const { t } = useLanguage();
@@ -21,23 +18,6 @@ export default function Services() {
         </div>
 
         <ServiceSlider />
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {t.services.items.slice(3).map((item, i) => (
-            <div
-              key={i}
-              data-testid={`service-card-${i + 3}`}
-              style={{ animationDelay: `${i * 80}ms` }}
-              className="group relative overflow-hidden rounded-sm border border-[#E7E5E4] bg-[#FDFBF7] hover:shadow-md transition-all hover:-translate-y-1 animate-fade-in-up min-h-[200px]"
-            >
-              <div className="relative p-8 md:p-10 flex flex-col h-full justify-start">
-                <div className={`mb-4 opacity-80 ${iconColors[i]}`}>{serviceIcons[i]}</div>
-                <h3 className="font-semibold text-[#1C1917] font-outfit mb-2 text-lg whitespace-nowrap">{item.title}</h3>
-                <p className="text-sm text-[#57534E] font-manrope leading-relaxed max-w-md">{item.desc}</p>
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );
