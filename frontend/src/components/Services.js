@@ -1,32 +1,9 @@
 import { useLanguage } from "../context/LanguageContext";
-import { Building2, Sprout, Snowflake, Sparkles, Brush, ClipboardList } from "lucide-react";
+import { Sparkles, Brush, ClipboardList } from "lucide-react";
+import ServiceSlider from "./ServiceSlider";
 
-const serviceIcons = [
-  <Building2 size={32} />,
-  <Sprout size={32} />,
-  <Snowflake size={32} />,
-  <Sparkles size={32} />,
-  <Brush size={32} />,
-  <ClipboardList size={32} />,
-];
-
-const iconColors = [
-  "text-[#F9B130]",
-  "text-[#0A8EDB]",
-  "text-[#0284C7]",
-  "text-[#F9B130]",
-  "text-[#0A8EDB]",
-  "text-[#0284C7]",
-];
-
-const serviceImages = [
-  "/img/clean-service-building.jpg",
-  "/img/clean-service-green.jpg",
-  "/img/clean-service-winter.jpg",
-  null,
-  null,
-  null,
-];
+const serviceIcons = [<Sparkles size={32} />, <Brush size={32} />, <ClipboardList size={32} />];
+const iconColors = ["text-[#F9B130]", "text-[#0A8EDB]", "text-[#0284C7]"];
 
 export default function Services() {
   const { t } = useLanguage();
@@ -43,42 +20,23 @@ export default function Services() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-          {t.services.items.map((item, i) => {
-            const isLarge = i < 3;
-            const colSpan =
-              i === 0 ? "md:col-span-7" : i === 1 ? "md:col-span-5" : i === 2 ? "md:col-span-12" : "md:col-span-4";
+        <ServiceSlider />
 
-            return (
-              <div
-                key={i}
-                data-testid={`service-card-${i}`}
-                style={{ animationDelay: `${i * 80}ms` }}
-                className={`group relative overflow-hidden rounded-sm border border-[#E7E5E4] bg-[#FDFBF7] hover:shadow-md transition-all hover:-translate-y-1 animate-fade-in-up ${colSpan} ${
-                  isLarge ? "min-h-[280px]" : "min-h-[200px]"
-                }`}
-              >
-                {serviceImages[i] && (
-                  <div className="absolute inset-0">
-                    <img
-                      src={serviceImages[i]}
-                      alt={item.title}
-                      width="1200"
-                      height="800"
-                      loading="lazy"
-                      decoding="async"
-                      className="w-full h-full object-cover opacity-20 group-hover:opacity-30 transition-opacity"
-                    />
-                  </div>
-                )}
-                <div className={`relative p-8 md:p-10 flex flex-col h-full ${isLarge ? "justify-end" : "justify-start"}`}>
-                  <div className={`mb-4 opacity-80 ${iconColors[i]}`}>{serviceIcons[i]}</div>
-                  <h3 className={`font-semibold text-[#1C1917] font-outfit mb-2 ${isLarge ? "text-xl sm:text-2xl" : "text-lg whitespace-nowrap"}`}>{item.title}</h3>
-                  <p className="text-sm text-[#57534E] font-manrope leading-relaxed max-w-md">{item.desc}</p>
-                </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {t.services.items.slice(3).map((item, i) => (
+            <div
+              key={i}
+              data-testid={`service-card-${i + 3}`}
+              style={{ animationDelay: `${i * 80}ms` }}
+              className="group relative overflow-hidden rounded-sm border border-[#E7E5E4] bg-[#FDFBF7] hover:shadow-md transition-all hover:-translate-y-1 animate-fade-in-up min-h-[200px]"
+            >
+              <div className="relative p-8 md:p-10 flex flex-col h-full justify-start">
+                <div className={`mb-4 opacity-80 ${iconColors[i]}`}>{serviceIcons[i]}</div>
+                <h3 className="font-semibold text-[#1C1917] font-outfit mb-2 text-lg whitespace-nowrap">{item.title}</h3>
+                <p className="text-sm text-[#57534E] font-manrope leading-relaxed max-w-md">{item.desc}</p>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
       </div>
     </section>

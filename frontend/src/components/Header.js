@@ -3,7 +3,7 @@ import { useLanguage } from "../context/LanguageContext";
 import { Menu, X, Phone, AlertTriangle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const sectionIds = ["hero", "services", "gallery", "bathroom", "contact"];
+const sectionIds = ["hero", "services", "gallery", "contact"];
 
 export default function Header({ showBanner = false }) {
   const { lang, toggleLang, t } = useLanguage();
@@ -42,7 +42,6 @@ export default function Header({ showBanner = false }) {
     { label: t.nav.home, href: "#hero", id: "hero" },
     { label: t.nav.services, href: "#services", id: "services" },
     { label: t.nav.gallery, href: "#gallery", id: "gallery" },
-    { label: t.nav.bathroom, href: "#bathroom", id: "bathroom" },
     { label: t.nav.contact, href: "#contact", id: "contact" },
   ];
 

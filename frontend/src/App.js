@@ -8,7 +8,6 @@ const About = lazy(() => import("./components/About"));
 const TrustBadges = lazy(() => import("./components/TrustBadges"));
 const Services = lazy(() => import("./components/Services"));
 const Gallery = lazy(() => import("./components/Gallery"));
-const Bathroom = lazy(() => import("./components/Bathroom"));
 const FAQ = lazy(() => import("./components/FAQ"));
 const Contact = lazy(() => import("./components/Contact"));
 import Footer from "./components/Footer";
@@ -37,7 +36,6 @@ function LandingPage() {
           <TrustBadges />
           <Services />
           <Gallery />
-          <Bathroom />
           <FAQ />
           <Contact />
         </Suspense>
