@@ -36,15 +36,15 @@ export default function Hero() {
             key={slide}
             src={heroSlides[slide].src}
             alt={heroSlides[slide].alt}
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover will-change-transform"
             width="1920"
             height="1080"
             fetchPriority="high"
             decoding="async"
-            initial={{ x: "100%" }}
-            animate={{ x: 0 }}
-            exit={{ x: "-100%" }}
-            transition={{ duration: 1, ease: [0.32, 0.72, 0, 1] }}
+            initial={{ x: "35%", opacity: 0, scale: 1.08 }}
+            animate={{ x: "0%", opacity: 1, scale: 1 }}
+            exit={{ x: "-35%", opacity: 0, scale: 1.04 }}
+            transition={{ duration: 1.8, ease: [0.22, 1, 0.36, 1], opacity: { duration: 1.4, ease: "easeInOut" } }}
           />
         </AnimatePresence>
         <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A]/85 via-[#0F172A]/60 to-[#0F172A]/20" />
