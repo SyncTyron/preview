@@ -1,31 +1,31 @@
 /**
- * RODA Haustechnik - zentrale Firmenstammdaten.
+ * MK Gebäudemanagement - zentrale Firmenstammdaten.
  * Einzige Quelle der Wahrheit fuer Adresse, Koordinaten, Telefon, E-Mail.
  * Wird von Location-Pages, SchemaOrg, Footer, Impressum usw. konsumiert.
  *
  * WICHTIG: Bei Adressaenderung NUR hier pflegen.
  */
 export const COMPANY = {
-  name: 'Roda Haustechnik',
-  legalName: 'Roda Haustechnik GmbH',
-  phone: '+49 2407 9573300',
-  phoneHref: 'tel:+4924079573300',
-  email: 'info@roda-haustechnik.de',
+  name: 'MK Gebäudemanagement',
+  legalName: 'MK Gebäudemanagement – Inhaber Mert Kurnali',
+  phone: '+49 163 210 66 88',
+  phoneHref: 'tel:+491632106688',
+  email: 'info@mk-gebaeudemanagement.de',
   logo: '/logo.svg',        // absolute URL im build - public/$(basename $LOGO_PATH)
 
   // Firmensitz - BITTE exakt wie im Impressum pflegen
   address: {
-    street: 'Kaiserstrasse 1',        // TODO: an Impressum anpassen
-    zip:    '52134',
-    city:   'Herzogenrath',
+    street: 'Auf dem Damm 112',
+    zip:    '47137',
+    city:   'Duisburg',
     country: 'DE',
   },
 
   // Geo-Koordinaten fuer Entfernungsberechnung (Haversine)
   // Ermitteln ueber: https://www.openstreetmap.org -> Rechtsklick -> "Koordinaten zeigen"
   geo: {
-    lat: 50.8702,   // Standard: Herzogenrath/Kohlscheid - BITTE exakt aus Impressum-Adresse setzen
-    lng: 6.0937,
+    lat: 51.4586,
+    lng: 6.7671,
   },
 };
 

@@ -5,11 +5,10 @@ import SeoHelmet from "../components/SeoHelmet";
 export default function Widerruf() {
   const { lang } = useLanguage();
   const back = lang === "DE" ? "Zurück zur Startseite" : "Back to Homepage";
-  const PH = "px-1 rounded-sm bg-amber-100 text-amber-900 font-semibold";
 
   return (
     <div data-testid="widerruf-page" className="min-h-screen bg-[#FDFBF7]">
-      <SeoHelmet title={"Widerrufsbelehrung"} description={"Widerrufsbelehrung nach § 355 BGB für Verbraucher – Roda Haustechnik, Herzogenrath."} path={"/widerruf"} />
+      <SeoHelmet title={"Widerrufsbelehrung"} description={"Widerrufsbelehrung nach § 355 BGB für Verbraucher – MK Gebäudemanagement, Duisburg."} path={"/widerruf"} />
       <div className="max-w-3xl mx-auto px-6 md:px-12 py-24">
         <a
           href="/"
@@ -53,9 +52,9 @@ export default function Widerruf() {
             <ul className="list-disc list-outside pl-5 mt-2 space-y-1">
               <li>
                 <strong>außerhalb von Geschäftsräumen</strong> geschlossen wird,
-                insbesondere bei Vertragsschluss im Haushalt des Kunden, vor Ort
-                auf der Baustelle oder bei einer vom Auftragnehmer organisierten
-                Veranstaltung außerhalb der Betriebsstätte (§ 312b BGB), oder
+                insbesondere bei Vertragsschluss im Haushalt des Kunden oder vor
+                Ort im zu reinigenden bzw. zu pflegenden Objekt (z. B. bei der
+                Objektbesichtigung) (§ 312b BGB), oder
               </li>
               <li>
                 als <strong>Fernabsatzvertrag</strong> ausschließlich unter
@@ -85,11 +84,11 @@ export default function Widerruf() {
               Um Ihr Widerrufsrecht auszuüben, müssen Sie uns
             </p>
             <p className="mt-2">
-              Roda Haustechnik – Inhaber Marco Nobis<br />
-              Schillerstr. 14<br />
-              52134 Herzogenrath<br />
-              Telefon: +49&nbsp;152&nbsp;2100&nbsp;6829<br />
-              E-Mail: kontakt@roda-haustechnik.de
+              MK Gebäudemanagement – Inhaber Mert Kurnali<br />
+              Auf dem Damm 112<br />
+              47137 Duisburg<br />
+              Telefon: +49&nbsp;163&nbsp;210&nbsp;66&nbsp;88<br />
+              E-Mail: info@mk-gebaeudemanagement.de
             </p>
             <p className="mt-3">
               mittels einer eindeutigen Erklärung (z. B. ein mit der Post
@@ -163,22 +162,16 @@ export default function Widerruf() {
             </p>
             <ul className="list-disc list-outside pl-5 mt-2 space-y-1">
               <li>
-                Verträgen zur Lieferung von Waren, die nicht vorgefertigt sind
-                und für deren Herstellung eine individuelle Auswahl oder
-                Bestimmung durch den Verbraucher maßgeblich ist oder die
-                eindeutig auf die persönlichen Bedürfnisse des Verbrauchers
-                zugeschnitten sind (z. B. maßgefertigte Waschtische,
-                Sonderanfertigungen für Badmöbel, individuell zugeschnittene
-                Duschtrennwände);
-              </li>
-              <li>
-                Verträgen zur Erbringung <strong>dringender Reparatur-
-                oder Instandhaltungsarbeiten</strong>, bei denen der Verbraucher
-                den Unternehmer ausdrücklich zu einem Besuch aufgefordert hat,
-                um solche Arbeiten vorzunehmen (§ 312 Abs. 2 Nr. 11 BGB), z. B.
-                Rohrbruch, Heizungsausfall, verstopfte Abflüsse – für die
-                Reparatur selbst und die dafür unmittelbar benötigten
-                Ersatzteile.
+                Verträgen zur Erbringung <strong>dringender Reparatur- oder
+                Instandhaltungsarbeiten</strong>, bei denen der Verbraucher den
+                Unternehmer ausdrücklich zu einem Besuch aufgefordert hat, um
+                solche Arbeiten vorzunehmen (§ 312 Abs. 2 Nr. 11 BGB) – z. B.
+                kurzfristig angeforderter Notfall-Winterdienst bei akuter
+                Glättegefahr, sofortige Beseitigung von Sturmschäden auf
+                Außenanlagen oder eine dringende Sonderreinigung nach einem
+                Wasser- oder Brandschaden. Für weitere, bei diesem Besuch
+                zusätzlich beauftragte Leistungen besteht das Widerrufsrecht
+                fort.
               </li>
             </ul>
           </section>
@@ -194,10 +187,10 @@ export default function Widerruf() {
             <div className="mt-4 p-5 rounded-sm border border-[#E7E5E4] bg-white text-[#1C1917] font-manrope text-sm space-y-3">
               <p>
                 An:<br />
-                Roda Haustechnik – Inhaber Marco Nobis<br />
-                Schillerstr. 14<br />
-                52134 Herzogenrath<br />
-                E-Mail: kontakt@roda-haustechnik.de
+                MK Gebäudemanagement – Inhaber Mert Kurnali<br />
+                Auf dem Damm 112<br />
+                47137 Duisburg<br />
+                E-Mail: info@mk-gebaeudemanagement.de
               </p>
               <p>
                 Hiermit widerrufe(n) ich/wir (*) den von mir/uns (*)
@@ -230,8 +223,8 @@ export default function Widerruf() {
               Über diese Website werden <strong>keine</strong> Verträge
               geschlossen. Das Kontaktformular dient ausschließlich der
               unverbindlichen Anfrage. Ein Widerrufsrecht entsteht erst mit dem
-              tatsächlichen Vertragsabschluss – in der Regel vor Ort beim Kunden
-              oder über Fernkommunikationsmittel. Sie erhalten in diesem Fall
+              tatsächlichen Vertragsabschluss – in der Regel nach der
+              Objektbesichtigung vor Ort oder über Fernkommunikationsmittel. Sie erhalten in diesem Fall
               die Widerrufsbelehrung erneut in Textform zusammen mit dem
               Auftragsformular bzw. der Auftragsbestätigung.
             </p>
@@ -239,9 +232,9 @@ export default function Widerruf() {
 
           <section className="pt-4 border-t border-[#E7E5E4] text-sm text-[#78716C]">
             <p>
-              Roda Haustechnik – Inhaber Marco Nobis<br />
-              Schillerstr. 14, 52134 Herzogenrath<br />
-              Stand: <span>April 2026</span>
+              MK Gebäudemanagement – Inhaber Mert Kurnali<br />
+              Auf dem Damm 112, 47137 Duisburg<br />
+              Stand: <span>Juni 2026</span>
             </p>
           </section>
         </div>

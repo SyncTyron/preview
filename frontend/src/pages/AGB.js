@@ -2,448 +2,152 @@ import { useLanguage } from "../context/LanguageContext";
 import { ArrowLeft } from "lucide-react";
 import SeoHelmet from "../components/SeoHelmet";
 
+const H2 = "font-outfit font-bold text-[#1C1917] text-xl mb-3";
+const LINK = "text-[#0A8EDB] hover:underline";
+const P = "mt-3";
+
 export default function AGB() {
   const { lang } = useLanguage();
   const back = lang === "DE" ? "Zurück zur Startseite" : "Back to Homepage";
-  const PH = "px-1 rounded-sm bg-amber-100 text-amber-900 font-semibold";
 
   return (
     <div data-testid="agb-page" className="min-h-screen bg-[#FDFBF7]">
-      <SeoHelmet title={"AGB"} description={"Allgemeine Geschäftsbedingungen der Roda Haustechnik – Sanitär, Heizung und Badsanierung in Herzogenrath."} path={"/agb"} />
+      <SeoHelmet title={"AGB"} description={"Allgemeine Geschäftsbedingungen von MK Gebäudemanagement – Gebäudereinigung, Grünflächenpflege und Winterdienst in Duisburg."} path={"/agb"} />
       <div className="max-w-3xl mx-auto px-6 md:px-12 py-24">
-        <a
-          href="/"
-          data-testid="agb-back-link"
-          className="inline-flex items-center gap-2 text-[#0A8EDB] hover:text-[#0873B3] font-manrope font-semibold text-sm mb-8 transition-colors"
-        >
-          <ArrowLeft size={16} />
-          {back}
+        <a href="/" data-testid="agb-back-link" className="inline-flex items-center gap-2 text-[#0A8EDB] hover:text-[#0873B3] font-manrope font-semibold text-sm mb-8 transition-colors">
+          <ArrowLeft size={16} />{back}
         </a>
 
-        <h1 className="text-3xl sm:text-4xl font-black tracking-tight text-[#1C1917] font-outfit mb-4">
-          Allgemeine Geschäftsbedingungen (AGB)
-        </h1>
-        <p className="text-sm text-[#78716C] mb-8">
-          Stand: <span>April 2026</span>
-        </p>
+        <h1 className="text-3xl sm:text-4xl font-black tracking-tight text-[#1C1917] font-outfit mb-4">Allgemeine Geschäftsbedingungen (AGB)</h1>
+        <p className="text-sm text-[#78716C] mb-8">Stand: <span>Juni 2026</span></p>
 
         <div className="font-manrope text-[#57534E] leading-relaxed space-y-7">
           <section className="p-4 rounded-sm bg-amber-50 border border-amber-200">
             <p className="text-sm text-amber-900">
-              <strong>Hinweis:</strong> Diese AGB sind ein branchentypisches Muster
-              für Handwerksleistungen im Bereich Sanitär, Heizung und Badsanierung.
-              Vor dem produktiven Einsatz sollten sie von einem Fachanwalt oder
-              der Handwerkskammer Aachen (HWK) / dem Zentralverband Sanitär
-              Heizung Klima (ZVSHK) geprüft werden.
+              <strong>Hinweis:</strong> Diese AGB sind auf Dienst- und Werkleistungen der Gebäudereinigung, Grünflächenpflege und des Winterdienstes zugeschnitten. Vor dem produktiven Einsatz empfehlen wir eine Prüfung durch einen Fachanwalt oder den Bundesinnungsverband des Gebäudereiniger-Handwerks (BIV).
             </p>
           </section>
 
           <section>
-            <h2 className="font-outfit font-bold text-[#1C1917] text-xl mb-3">
-              § 1 Geltungsbereich, Vertragspartner
-            </h2>
-            <p>
-              (1) Diese Allgemeinen Geschäftsbedingungen (nachfolgend „AGB") gelten
-              für alle Verträge zwischen
-            </p>
+            <h2 className={H2}>§ 1 Geltungsbereich, Vertragspartner</h2>
+            <p>(1) Diese Allgemeinen Geschäftsbedingungen (nachfolgend „AGB“) gelten für alle Verträge zwischen</p>
             <p className="mt-2">
-              Roda Haustechnik – Inhaber Marco Nobis<br />
-              Schillerstr. 14, 52134 Herzogenrath, Deutschland<br />
-              Telefon: +49&nbsp;152&nbsp;2100&nbsp;6829<br />
-              E-Mail: kontakt@roda-haustechnik.de<br />
-              (nachfolgend „Auftragnehmer")
+              MK Gebäudemanagement – Inhaber Mert Kurnali<br />
+              Auf dem Damm 112, 47137 Duisburg, Deutschland<br />
+              Telefon: +49&nbsp;163&nbsp;210&nbsp;66&nbsp;88<br />
+              E-Mail: info@mk-gebaeudemanagement.de<br />
+              (nachfolgend „Auftragnehmer“)
             </p>
-            <p className="mt-3">
-              und seinen Kunden (nachfolgend „Auftraggeber") über die Ausführung
-              von Werk- und Dienstleistungen im Bereich Sanitär-, Heizungs- und
-              Klimatechnik, insbesondere Installation, Wartung, Reparatur,
-              Modernisierung und Badsanierung sowie den Verkauf und die
-              Montage von Zubehör und Ersatzteilen.
-            </p>
-            <p className="mt-3">
-              (2) Für Verbraucher im Sinne von § 13 BGB gelten die gesetzlichen
-              Vorschriften des Bürgerlichen Gesetzbuches (BGB), insbesondere die
-              §§ 631 ff. BGB (Werkvertrag).
-            </p>
-            <p className="mt-3">
-              (3) Gegenüber Unternehmern im Sinne von § 14 BGB wird die Vergabe-
-              und Vertragsordnung für Bauleistungen – Teil B (VOB/B) in der jeweils
-              aktuellen Fassung vereinbart, soweit dies ausdrücklich schriftlich
-              bestätigt ist.
-            </p>
-            <p className="mt-3">
-              (4) Abweichende, entgegenstehende oder ergänzende Geschäfts-
-              bedingungen des Auftraggebers werden nur dann und insoweit
-              Vertragsbestandteil, als der Auftragnehmer ihrer Geltung ausdrücklich
-              schriftlich zugestimmt hat.
-            </p>
+            <p className={P}>und seinen Kunden (nachfolgend „Auftraggeber“) über die Erbringung von Dienst- und Werkleistungen in den Bereichen <strong>Gebäudereinigung</strong> (Unterhalts-, Grund-, Glas- und Sonderreinigung), <strong>Grünflächenpflege</strong> (Rasen-, Hecken-, Beet- und Außenanlagenpflege) sowie <strong>Winterdienst</strong> (Räum- und Streudienst).</p>
+            <p className={P}>(2) Regelmäßig wiederkehrende Leistungen (insbesondere Unterhaltsreinigung, laufende Grünflächenpflege und saisonaler Winterdienst) sind Dienstleistungen im Sinne der §§ 611 ff. BGB. Einmalige, erfolgsbezogene Leistungen (insbesondere Grund-, Glas- und Sonderreinigungen sowie einzelne Schnitt- oder Rodungsarbeiten) sind Werkleistungen im Sinne der §§ 631 ff. BGB.</p>
+            <p className={P}>(3) Verbraucher im Sinne von § 13 BGB ist jede natürliche Person, die den Vertrag zu Zwecken abschließt, die überwiegend weder ihrer gewerblichen noch ihrer selbständigen beruflichen Tätigkeit zugerechnet werden können. Unternehmer ist jede natürliche oder juristische Person im Sinne von § 14 BGB.</p>
+            <p className={P}>(4) Abweichende, entgegenstehende oder ergänzende Geschäftsbedingungen des Auftraggebers werden nur dann und insoweit Vertragsbestandteil, als der Auftragnehmer ihrer Geltung ausdrücklich in Textform zugestimmt hat.</p>
           </section>
 
           <section>
-            <h2 className="font-outfit font-bold text-[#1C1917] text-xl mb-3">
-              § 2 Angebot, Kostenvoranschlag und Vertragsschluss
-            </h2>
-            <p>
-              (1) Angebote des Auftragnehmers sind freibleibend, sofern sie nicht
-              ausdrücklich als verbindlich gekennzeichnet sind. Angebote gelten
-              – soweit nicht anders vermerkt – 30 Tage ab Angebotsdatum.
-            </p>
-            <p className="mt-3">
-              (2) Kostenvoranschläge sind unverbindliche Schätzungen der
-              voraussichtlichen Kosten. Unwesentliche Überschreitungen bis zu
-              15 % sind zulässig und müssen vom Auftraggeber getragen werden.
-              Eine wesentliche Überschreitung wird dem Auftraggeber unverzüglich
-              angezeigt (§ 650 BGB).
-            </p>
-            <p className="mt-3">
-              (3) Kostenvoranschläge, Zeichnungen, Berechnungen und andere
-              Unterlagen sind grundsätzlich <strong>kostenpflichtig</strong>, sofern
-              sie mit erheblichem Aufwand erstellt werden müssen. Die Vergütung
-              für einen detaillierten Kostenvoranschlag wird im Falle einer
-              Auftragserteilung auf die Werklohnforderung angerechnet.
-            </p>
-            <p className="mt-3">
-              (4) Der Vertrag kommt durch Auftragserteilung des Auftraggebers
-              (schriftlich, per E-Mail oder mündlich) und schriftliche oder
-              elektronische Auftragsbestätigung des Auftragnehmers oder durch
-              Beginn der Ausführung zustande.
-            </p>
-            <p className="mt-3">
-              (5) Für außerhalb von Geschäftsräumen geschlossene Verträge sowie
-              Fernabsatzverträge mit Verbrauchern gilt das gesetzliche
-              Widerrufsrecht. Einzelheiten ergeben sich aus der
-              <a
-                href="/widerruf"
-                data-testid="agb-widerruf-link"
-                className="text-[#0A8EDB] hover:underline"
-              >
-                {" "}Widerrufsbelehrung
-              </a>.
-            </p>
+            <h2 className={H2}>§ 2 Angebot, Objektbesichtigung und Vertragsschluss</h2>
+            <p>(1) Angebote des Auftragnehmers sind freibleibend, sofern sie nicht ausdrücklich als verbindlich gekennzeichnet sind. Angebote gelten – soweit nicht anders vermerkt – 30 Tage ab Angebotsdatum.</p>
+            <p className={P}>(2) Angebote beruhen auf den Angaben des Auftraggebers zu Flächen, Ausstattung, Verschmutzungsgrad, Nutzung und Zugänglichkeit des Objekts sowie ggf. auf einer Objektbesichtigung. Erweisen sich diese Angaben als unzutreffend oder ändern sich die Verhältnisse wesentlich, ist der Auftragnehmer berechtigt, das Angebot bzw. die Vergütung entsprechend anzupassen.</p>
+            <p className={P}>(3) Der Vertrag kommt durch Auftragserteilung des Auftraggebers (in Textform oder mündlich) und Auftragsbestätigung des Auftragnehmers in Textform oder durch Beginn der Leistungsausführung zustande.</p>
+            <p className={P}>(4) Über die Website des Auftragnehmers werden keine Verträge geschlossen; das Kontaktformular dient ausschließlich der unverbindlichen Anfrage.</p>
+            <p className={P}>(5) Für außerhalb von Geschäftsräumen geschlossene Verträge sowie Fernabsatzverträge mit Verbrauchern gilt das gesetzliche Widerrufsrecht. Einzelheiten ergeben sich aus der <a href="/widerruf" data-testid="agb-widerruf-link" className={LINK}>Widerrufsbelehrung</a>.</p>
           </section>
 
           <section>
-            <h2 className="font-outfit font-bold text-[#1C1917] text-xl mb-3">
-              § 3 Leistungsumfang, Mitwirkungspflichten
-            </h2>
-            <p>
-              (1) Der Leistungsumfang ergibt sich aus dem Angebot, der
-              Auftragsbestätigung oder dem unterzeichneten Auftragsformular.
-              Leistungsänderungen bedürfen der Textform.
-            </p>
-            <p className="mt-3">
-              (2) Der Auftraggeber stellt dem Auftragnehmer während der
-              Arbeitszeiten freien und kostenlosen Zugang zur Baustelle / zum
-              Arbeitsort sicher. Er hat ferner Strom, Wasser sowie eine
-              abschließbare Lagermöglichkeit für Werkzeug und Material
-              unentgeltlich zur Verfügung zu stellen.
-            </p>
-            <p className="mt-3">
-              (3) Auf verdeckte Leitungen, Rohre, Kabel oder sonstige Einbauten
-              hat der Auftraggeber vor Beginn der Arbeiten ausdrücklich
-              hinzuweisen. Unterlässt er dies, haftet der Auftragnehmer nicht für
-              hieraus entstehende Schäden, es sei denn, es liegt Vorsatz oder
-              grobe Fahrlässigkeit vor.
-            </p>
-            <p className="mt-3">
-              (4) Notwendige behördliche Genehmigungen (z. B. nach
-              Bauordnungs-, Denkmalschutz- oder Wohnungseigentumsrecht) sowie
-              die Zustimmung des Vermieters bzw. der Eigentümergemeinschaft
-              sind vom Auftraggeber rechtzeitig einzuholen.
-            </p>
+            <h2 className={H2}>§ 3 Leistungsumfang</h2>
+            <p>(1) Art, Umfang, Häufigkeit und Ausführungszeiten der Leistungen ergeben sich aus dem Angebot, der Auftragsbestätigung bzw. dem vereinbarten Leistungsverzeichnis (Reinigungs- oder Pflegeplan). Nicht ausdrücklich aufgeführte Leistungen sind nicht geschuldet und werden nach gesonderter Beauftragung zusätzlich vergütet.</p>
+            <p className={P}>(2) <strong>Gebäudereinigung:</strong> Die Leistungen werden fachgerecht nach dem anerkannten Stand der Technik des Gebäudereiniger-Handwerks mit geeigneten Reinigungsmitteln und -geräten ausgeführt. Der Auftragnehmer wählt Reinigungsverfahren und -mittel nach pflichtgemäßem Ermessen aus, sofern nichts anderes vereinbart ist.</p>
+            <p className={P}>(3) <strong>Grünflächenpflege:</strong> Umfang und Turnus der Pflegearbeiten (z. B. Rasenschnitt, Hecken- und Gehölzschnitt, Unkraut- und Laubbeseitigung) richten sich nach Vegetationsverlauf und Witterung. Arbeiten, die gesetzlichen Schnittverboten (insbesondere § 39 Abs. 5 BNatSchG, 1. März bis 30. September) unterliegen, werden nur im gesetzlich zulässigen Rahmen ausgeführt. Die Entsorgung von Grünschnitt ist nur geschuldet, wenn dies vereinbart wurde.</p>
+            <p className={P}>(4) <strong>Winterdienst:</strong> Der Auftragnehmer übernimmt für die vereinbarten Flächen und den vereinbarten Zeitraum (Wintersaison, regelmäßig 1. November bis 31. März) das Räumen von Schnee und das Abstumpfen bzw. Beseitigen von Glätte innerhalb der vereinbarten Zeiten. Soweit nichts anderes vereinbart ist, orientieren sich die Einsatzzeiten an den ortsüblichen Anforderungen der Straßenreinigungs- und Winterdienstsatzung der Stadt Duisburg. Der Einsatz erfolgt bei Schneefall bzw. Glättebildung nach den Feststellungen des Auftragnehmers und den Wetterdaten anerkannter Wetterdienste. Die Auswahl der Streumittel erfolgt unter Beachtung kommunaler Vorgaben (insbesondere Salzverbote).</p>
+            <p className={P}>(5) Bei außergewöhnlichen Witterungsverhältnissen (z. B. anhaltender starker Schneefall, Eisregen, extreme Schneemengen), bei denen ein Räumen und Streuen erkennbar keinen Erfolg verspricht oder unzumutbar ist, ist der Auftragnehmer zur Leistung erst verpflichtet, wenn die Verhältnisse dies wieder zulassen. Ein Anspruch auf einen bestimmten Zeitpunkt der Räumung innerhalb der vereinbarten Zeiten besteht nicht; der Auftragnehmer bemüht sich um eine zeitnahe Ausführung nach Einsatzplan.</p>
+            <p className={P}>(6) Der Auftragnehmer ist berechtigt, zur Leistungserbringung geeignete und zuverlässige Subunternehmer einzusetzen. Er bleibt gegenüber dem Auftraggeber für die ordnungsgemäße Leistungserbringung verantwortlich.</p>
           </section>
 
           <section>
-            <h2 className="font-outfit font-bold text-[#1C1917] text-xl mb-3">
-              § 4 Ausführungsfristen, Verzug
-            </h2>
-            <p>
-              (1) Termine und Fristen sind nur verbindlich, wenn sie ausdrücklich
-              als verbindlich schriftlich vereinbart wurden. Im Übrigen gelten
-              Termine als unverbindliche Richtwerte.
-            </p>
-            <p className="mt-3">
-              (2) Ereignisse höherer Gewalt (insbesondere Pandemien, Streik,
-              Aussperrung, behördliche Maßnahmen, Lieferverzögerungen von
-              Vorlieferanten, Energie- und Rohstoffmangel), die die Leistung
-              wesentlich erschweren oder unmöglich machen, berechtigen den
-              Auftragnehmer, die Ausführung für die Dauer der Behinderung
-              hinauszuschieben. Dauert die Behinderung länger als acht Wochen,
-              sind beide Parteien berechtigt, vom Vertrag zurückzutreten; bereits
-              erbrachte Leistungen sind zu vergüten.
-            </p>
-            <p className="mt-3">
-              (3) Gerät der Auftragnehmer mit der Leistung in Verzug, haftet er
-              bei leichter Fahrlässigkeit auf den typischen, vorhersehbaren
-              Schaden. Die Haftung ist auf 5 % der Netto-Auftragssumme begrenzt.
-              Die Haftung für Vorsatz, grobe Fahrlässigkeit und die Verletzung
-              von Leben, Körper und Gesundheit bleibt unberührt.
-            </p>
+            <h2 className={H2}>§ 4 Mitwirkungspflichten des Auftraggebers</h2>
+            <p>(1) Der Auftraggeber gewährt dem Auftragnehmer zu den vereinbarten Zeiten ungehinderten Zugang zu den Räumen und Flächen und stellt Wasser, Strom, ausreichende Beleuchtung sowie – soweit erforderlich – einen abschließbaren Raum zur Lagerung von Geräten und Materialien unentgeltlich zur Verfügung.</p>
+            <p className={P}>(2) Überlassene Schlüssel, Transponder oder Zugangscodes werden vom Auftragnehmer sorgfältig verwahrt und nur an eingesetzte Mitarbeiter ausgegeben. Bei Verlust haftet der Auftragnehmer im Rahmen von § 9; die Kosten einer Schließanlagenerneuerung sind auf den nachgewiesenen, erforderlichen Aufwand begrenzt.</p>
+            <p className={P}>(3) Der Auftraggeber weist den Auftragnehmer vor Leistungsbeginn auf empfindliche Oberflächen, besondere Materialien, Gefahrenstellen, Alarmanlagen sowie auf Besonderheiten des Objekts hin, die für eine sachgerechte Ausführung erheblich sind. Unterlässt er dies, haftet der Auftragnehmer für hieraus entstehende Schäden nur bei Vorsatz oder grober Fahrlässigkeit.</p>
+            <p className={P}>(4) Beim Winterdienst hat der Auftraggeber die zu betreuenden Flächen frei von Hindernissen (insbesondere abgestellten Fahrzeugen, Mülltonnen, Gegenständen) zu halten und Flächen für die Schneelagerung zu dulden. Nicht zugängliche Flächen gelten insoweit als nicht geschuldet.</p>
+            <p className={P}>(5) Bei der Grünflächenpflege hat der Auftraggeber auf im Boden verlegte Leitungen, Bewässerungsanlagen, Beleuchtung und ähnliche Einbauten hinzuweisen.</p>
+            <p className={P}>(6) Kommt der Auftraggeber seinen Mitwirkungspflichten nicht nach und kann die Leistung deshalb nicht oder nur eingeschränkt erbracht werden, bleibt der Vergütungsanspruch bestehen; ersparte Aufwendungen werden angerechnet. Zusätzlicher Aufwand (z. B. vergebliche Anfahrt) wird gesondert vergütet.</p>
           </section>
 
           <section>
-            <h2 className="font-outfit font-bold text-[#1C1917] text-xl mb-3">
-              § 5 Preise, Zahlungsbedingungen
-            </h2>
-            <p>
-              (1) Alle Preise verstehen sich – sofern nicht anders ausgewiesen –
-              in Euro zzgl. der jeweils gültigen gesetzlichen Umsatzsteuer.
-            </p>
-            <p className="mt-3">
-              (2) Soweit nichts anderes vereinbart ist, sind Rechnungen
-              <strong> sofort nach Zugang ohne Abzug</strong> zahlbar. Bei
-              Umfangreicheren Aufträgen ist der Auftragnehmer berechtigt,
-              Abschlagszahlungen nach Leistungsfortschritt (§ 632a BGB) zu
-              verlangen.
-            </p>
-            <p className="mt-3">
-              (3) Bei Neukunden, Aufträgen über 5.000 € netto oder
-              Materialvorleistungen ist der Auftragnehmer berechtigt, eine
-              angemessene Anzahlung (in der Regel bis zu 30 % der
-              Auftragssumme) zu verlangen.
-            </p>
-            <p className="mt-3">
-              (4) Der Auftraggeber kommt ohne gesonderte Mahnung 30 Tage nach
-              Fälligkeit und Zugang der Rechnung in Verzug; bei Verbrauchern nur,
-              wenn auf diese Rechtsfolge in der Rechnung besonders hingewiesen
-              wurde (§ 286 Abs. 3 BGB).
-            </p>
-            <p className="mt-3">
-              (5) Während des Verzugs ist die Geldschuld bei Verbrauchern mit
-              5 Prozentpunkten, bei Unternehmern mit 9 Prozentpunkten über dem
-              Basiszinssatz zu verzinsen (§ 288 BGB). Die Geltendmachung eines
-              weitergehenden Schadens bleibt vorbehalten. Bei Unternehmern wird
-              zusätzlich eine Verzugspauschale von 40 € fällig (§ 288 Abs. 5
-              BGB).
-            </p>
-            <p className="mt-3">
-              (6) Aufrechnungs- und Zurückbehaltungsrechte stehen dem
-              Auftraggeber nur zu, wenn seine Gegenforderungen rechtskräftig
-              festgestellt, unbestritten oder vom Auftragnehmer anerkannt sind.
-            </p>
+            <h2 className={H2}>§ 5 Ausführungszeiten, Behinderung</h2>
+            <p>(1) Vereinbarte Ausführungszeiten sind verbindlich, soweit sie ausdrücklich als solche in Textform festgelegt wurden. Im Übrigen gelten Zeitangaben als unverbindliche Richtwerte.</p>
+            <p className={P}>(2) Ereignisse höherer Gewalt sowie sonstige unvorhersehbare, vom Auftragnehmer nicht zu vertretende Umstände (insbesondere Unwetter, Pandemien, Streik, behördliche Maßnahmen, Betriebsstörungen, Ausfall von Zulieferern) verlängern die Ausführungsfristen um die Dauer der Behinderung. Dauert die Behinderung länger als acht Wochen, sind beide Parteien berechtigt, hinsichtlich des noch nicht erfüllten Teils vom Vertrag zurückzutreten.</p>
+            <p className={P}>(3) Gesetzliche Feiertage sind – sofern nicht anders vereinbart – keine Leistungstage. Beim Winterdienst gilt dies nicht; hier werden Leistungen auch an Sonn- und Feiertagen innerhalb der vereinbarten Zeiten erbracht.</p>
           </section>
 
           <section>
-            <h2 className="font-outfit font-bold text-[#1C1917] text-xl mb-3">
-              § 6 Eigentumsvorbehalt
-            </h2>
-            <p>
-              (1) Gelieferte, aber noch nicht fest verbaute Waren bleiben bis zur
-              vollständigen Bezahlung aller Forderungen aus der Geschäfts-
-              verbindung Eigentum des Auftragnehmers.
-            </p>
-            <p className="mt-3">
-              (2) Soweit Materialien durch den Einbau wesentlicher Bestandteil
-              des Grundstücks oder Gebäudes werden (§§ 93, 94 BGB), tritt der
-              Auftraggeber bereits jetzt seine Ansprüche aus einem etwaigen
-              Verkauf oder der Vermietung der Sache in Höhe der offenen
-              Forderung an den Auftragnehmer ab; der Auftragnehmer nimmt die
-              Abtretung hiermit an.
-            </p>
-            <p className="mt-3">
-              (3) Der Auftraggeber ist verpflichtet, die unter Eigentumsvorbehalt
-              gelieferten Waren pfleglich zu behandeln und sie auf seine Kosten
-              gegen Diebstahl, Feuer-, Wasser- und sonstige Schäden ausreichend
-              zu versichern.
-            </p>
+            <h2 className={H2}>§ 6 Vergütung, Preisanpassung, Zahlungsbedingungen</h2>
+            <p>(1) Es gelten die im Angebot bzw. in der Auftragsbestätigung vereinbarten Preise. Gegenüber Verbrauchern werden Preise als Endpreise inklusive gesetzlicher Umsatzsteuer angegeben, gegenüber Unternehmern zuzüglich der jeweils gültigen gesetzlichen Umsatzsteuer.</p>
+            <p className={P}>(2) Bei Winterdienstverträgen kann eine Bereitstellungspauschale (Saisonpauschale) für die Vorhaltung von Personal, Geräten und Streumitteln vereinbart werden, die unabhängig von der Anzahl der tatsächlichen Einsätze anfällt. Einsätze werden – je nach Vereinbarung – pauschal oder nach tatsächlicher Anzahl abgerechnet.</p>
+            <p className={P}>(3) Bei Dauerverträgen mit einer Laufzeit von mehr als vier Monaten ist der Auftragnehmer berechtigt, die Vergütung anzupassen, wenn sich die Lohnkosten aufgrund allgemeinverbindlicher Tarifverträge im Gebäudereiniger-Handwerk, der gesetzliche Mindestlohn oder die Kosten für Betriebsstoffe und Material nach Vertragsschluss ändern. Die Anpassung erfolgt im Verhältnis der Kostenänderung frühestens zum Zeitpunkt der Kostenänderung und wird dem Auftraggeber mindestens sechs Wochen vorher in Textform angezeigt. Beträgt die Erhöhung mehr als 5 % der bisherigen Vergütung, kann der Auftraggeber den Vertrag innerhalb von vier Wochen nach Zugang der Anzeige zum Zeitpunkt des Wirksamwerdens der Erhöhung kündigen. Kostensenkungen werden in gleicher Weise weitergegeben.</p>
+            <p className={P}>(4) Wiederkehrende Leistungen werden monatlich nachträglich abgerechnet, sofern nichts anderes vereinbart ist. Einmalige Leistungen werden nach Abnahme bzw. Fertigstellung abgerechnet. Bei umfangreichen Einzelaufträgen kann der Auftragnehmer angemessene Abschlagszahlungen verlangen (§ 632a BGB).</p>
+            <p className={P}>(5) Rechnungen sind innerhalb von 14 Tagen nach Zugang ohne Abzug zahlbar. Der Auftraggeber kommt spätestens 30 Tage nach Fälligkeit und Zugang der Rechnung in Verzug; gegenüber Verbrauchern gilt dies nur, wenn in der Rechnung besonders darauf hingewiesen wurde (§ 286 Abs. 3 BGB).</p>
+            <p className={P}>(6) Während des Verzugs ist die Geldschuld gegenüber Verbrauchern mit 5 Prozentpunkten, gegenüber Unternehmern mit 9 Prozentpunkten über dem Basiszinssatz zu verzinsen (§ 288 BGB). Gegenüber Unternehmern fällt zusätzlich eine Verzugspauschale von 40 € an (§ 288 Abs. 5 BGB). Die Geltendmachung eines weitergehenden Schadens bleibt vorbehalten.</p>
+            <p className={P}>(7) Aufrechnungs- und Zurückbehaltungsrechte stehen dem Auftraggeber nur zu, soweit seine Gegenansprüche rechtskräftig festgestellt, unbestritten oder vom Auftragnehmer anerkannt sind oder auf demselben Vertragsverhältnis beruhen.</p>
           </section>
 
           <section>
-            <h2 className="font-outfit font-bold text-[#1C1917] text-xl mb-3">
-              § 7 Abnahme
-            </h2>
-            <p>
-              (1) Der Auftraggeber ist zur Abnahme des Werks nach Fertigstellung
-              verpflichtet (§ 640 BGB). Nimmt der Auftraggeber das Werk trotz
-              Fertigstellung und Aufforderung innerhalb einer vom Auftragnehmer
-              gesetzten angemessenen Frist (mindestens 12 Werktage) nicht ab,
-              ohne einen wesentlichen Mangel zu rügen, gilt das Werk als
-              abgenommen.
-            </p>
-            <p className="mt-3">
-              (2) Mit der Abnahme beginnt die Gewährleistungsfrist. Etwaige
-              Mängel sind bei der Abnahme zu protokollieren.
-            </p>
-            <p className="mt-3">
-              (3) Wegen unwesentlicher Mängel kann die Abnahme nicht verweigert
-              werden (§ 640 Abs. 1 Satz 2 BGB).
-            </p>
+            <h2 className={H2}>§ 7 Vertragslaufzeit und Kündigung von Dauerverträgen</h2>
+            <p>(1) Verträge über wiederkehrende Leistungen (Unterhaltsreinigung, laufende Grünflächenpflege, Winterdienst) werden für die vereinbarte Laufzeit geschlossen. Ist keine Laufzeit vereinbart, gilt der Vertrag als auf unbestimmte Zeit geschlossen und kann von beiden Seiten mit einer Frist von drei Monaten zum Monatsende gekündigt werden.</p>
+            <p className={P}>(2) Gegenüber <strong>Verbrauchern</strong> beträgt die anfängliche Laufzeit höchstens zwei Jahre. Nach Ablauf verlängert sich der Vertrag auf unbestimmte Zeit und kann jederzeit mit einer Frist von einem Monat gekündigt werden (§ 309 Nr. 9 BGB). Winterdienstverträge mit Verbrauchern enden mit Ablauf der vereinbarten Saison, sofern keine Verlängerung vereinbart wurde.</p>
+            <p className={P}>(3) Gegenüber <strong>Unternehmern</strong> verlängert sich der Vertrag nach Ablauf der Erstlaufzeit jeweils um zwölf Monate, wenn er nicht mit einer Frist von drei Monaten zum Ende der jeweiligen Laufzeit gekündigt wird.</p>
+            <p className={P}>(4) Das Recht zur außerordentlichen Kündigung aus wichtigem Grund bleibt unberührt. Ein wichtiger Grund liegt für den Auftragnehmer insbesondere vor, wenn der Auftraggeber mit zwei aufeinanderfolgenden Monatsrechnungen in Verzug ist oder seine Mitwirkungspflichten trotz Abmahnung nachhaltig verletzt.</p>
+            <p className={P}>(5) Kündigungen bedürfen der Textform (§ 126b BGB), z. B. per E-Mail oder Brief.</p>
+            <p className={P}>(6) Bei einmaligen Werkleistungen kann der Auftraggeber den Vertrag bis zur Fertigstellung jederzeit kündigen (§ 648 BGB). Der Auftragnehmer ist in diesem Fall berechtigt, die vereinbarte Vergütung abzüglich ersparter Aufwendungen zu verlangen.</p>
           </section>
 
           <section>
-            <h2 className="font-outfit font-bold text-[#1C1917] text-xl mb-3">
-              § 8 Gewährleistung / Sachmängelhaftung
-            </h2>
-            <p>
-              (1) Die Gewährleistung richtet sich nach den gesetzlichen
-              Vorschriften der §§ 633 ff. BGB, soweit nachfolgend nichts
-              Abweichendes geregelt ist.
-            </p>
-            <p className="mt-3">
-              (2) Die Gewährleistungsfrist beträgt
-            </p>
-            <ul className="list-disc list-outside pl-5 mt-2 space-y-1">
-              <li>
-                bei Arbeiten an einem Bauwerk und dazugehörenden
-                Planungs-/Überwachungsleistungen <strong>5 Jahre</strong> ab
-                Abnahme (§ 634a Abs. 1 Nr. 2 BGB);
-              </li>
-              <li>
-                bei sonstigen Werkleistungen gegenüber Verbrauchern
-                <strong> 2 Jahre</strong> ab Abnahme;
-              </li>
-              <li>
-                bei reinen Warenverkäufen gegenüber Unternehmern
-                <strong> 1 Jahr</strong> ab Gefahrübergang (soweit gesetzlich
-                zulässig).
-              </li>
-            </ul>
-            <p className="mt-3">
-              (3) Mängel sind dem Auftragnehmer unverzüglich nach Entdeckung
-              schriftlich oder in Textform anzuzeigen.
-            </p>
-            <p className="mt-3">
-              (4) Im Fall eines Mangels wird der Auftragnehmer nach seiner Wahl
-              Nacherfüllung durch Beseitigung des Mangels oder durch Herstellung
-              eines neuen, mangelfreien Werks leisten. Schlägt die Nacherfüllung
-              fehl, ist sie unzumutbar oder wird sie vom Auftragnehmer zu Unrecht
-              verweigert, kann der Auftraggeber nach den gesetzlichen
-              Bestimmungen mindern, zurücktreten oder Schadensersatz verlangen.
-            </p>
-            <p className="mt-3">
-              (5) Ansprüche wegen Verschleiß bei bestimmungsgemäßem Gebrauch,
-              unsachgemäßer Behandlung oder Wartungsmängeln auf Seiten des
-              Auftraggebers sind ausgeschlossen.
-            </p>
+            <h2 className={H2}>§ 8 Abnahme, Reklamation, Gewährleistung</h2>
+            <p>(1) Einmalige Werkleistungen (z. B. Grund- oder Glasreinigung) sind vom Auftraggeber nach Fertigstellung abzunehmen (§ 640 BGB). Erkennbare Mängel sind dem Auftragnehmer <strong>unverzüglich, spätestens innerhalb von drei Werktagen</strong> nach Leistungserbringung in Textform anzuzeigen, damit eine Überprüfung im noch unveränderten Zustand möglich ist. Bei Verbrauchern bleiben die gesetzlichen Gewährleistungsrechte durch eine verspätete Anzeige unberührt; der Auftragnehmer kann jedoch einwenden, dass eine Verschlechterung auf der zwischenzeitlichen Nutzung beruht.</p>
+            <p className={P}>(2) Bei wiederkehrenden Dienstleistungen sind Beanstandungen unverzüglich mitzuteilen. Berechtigte Beanstandungen werden im Rahmen der Nachbesserung kurzfristig – regelmäßig innerhalb von 24 Stunden an Werktagen – behoben. Ein Anspruch auf Minderung der Vergütung besteht nur, wenn die Nachbesserung fehlschlägt oder vom Auftragnehmer verweigert wird.</p>
+            <p className={P}>(3) Für Werkleistungen richtet sich die Gewährleistung nach den gesetzlichen Vorschriften (§§ 633 ff. BGB). Die Gewährleistungsfrist beträgt gegenüber Verbrauchern zwei Jahre ab Abnahme; gegenüber Unternehmern ein Jahr, soweit gesetzlich zulässig.</p>
+            <p className={P}>(4) Keine Mängel sind insbesondere: Verschmutzungen, die nach Leistungserbringung durch Nutzung oder Witterung eintreten; Beeinträchtigungen durch vorhandene Substanz- oder Materialschäden (z. B. blinde Glasscheiben, verkratzte oder poröse Oberflächen, dauerhafte Verfärbungen); Erscheinungen, die auf unterlassene Hinweise des Auftraggebers nach § 4 zurückgehen; sowie beim Winterdienst erneute Schnee- oder Glättebildung nach einem ordnungsgemäß durchgeführten Einsatz.</p>
           </section>
 
           <section>
-            <h2 className="font-outfit font-bold text-[#1C1917] text-xl mb-3">
-              § 9 Haftung
-            </h2>
-            <p>
-              (1) Der Auftragnehmer haftet unbeschränkt für Vorsatz und grobe
-              Fahrlässigkeit sowie bei Verletzung von Leben, Körper und
-              Gesundheit. Gleiches gilt bei der Verletzung vertragswesentlicher
-              Pflichten (Kardinalpflichten), deren Erfüllung die ordnungsgemäße
-              Durchführung des Vertrags überhaupt erst ermöglicht und auf deren
-              Einhaltung der Vertragspartner regelmäßig vertraut und vertrauen
-              darf.
-            </p>
-            <p className="mt-3">
-              (2) Im Übrigen ist die Haftung für leichte Fahrlässigkeit
-              ausgeschlossen. Bei der Verletzung von Kardinalpflichten aus
-              leichter Fahrlässigkeit ist die Haftung auf den vertragstypisch
-              vorhersehbaren Schaden beschränkt.
-            </p>
-            <p className="mt-3">
-              (3) Die Haftung nach dem Produkthaftungsgesetz bleibt unberührt.
-            </p>
-            <p className="mt-3">
-              (4) Der Auftragnehmer verfügt über eine Betriebshaftpflicht-
-              versicherung. Details siehe
-              <a
-                href="/impressum"
-                className="text-[#0A8EDB] hover:underline"
-              >
-                {" "}Impressum
-              </a>.
-            </p>
+            <h2 className={H2}>§ 9 Haftung</h2>
+            <p>(1) Der Auftragnehmer haftet unbeschränkt für Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit sowie für Schäden, die auf Vorsatz oder grober Fahrlässigkeit des Auftragnehmers, seiner gesetzlichen Vertreter oder Erfüllungsgehilfen beruhen.</p>
+            <p className={P}>(2) Bei leicht fahrlässiger Verletzung wesentlicher Vertragspflichten (Kardinalpflichten) ist die Haftung auf den vertragstypischen, vorhersehbaren Schaden begrenzt. Im Übrigen ist die Haftung für leichte Fahrlässigkeit ausgeschlossen.</p>
+            <p className={P}>(3) <strong>Winterdienst:</strong> Mit dem Winterdienstvertrag übernimmt der Auftragnehmer die Durchführung der Räum- und Streupflicht für die vereinbarten Flächen und Zeiten. Die dem Auftraggeber als Eigentümer bzw. Anlieger obliegende Verkehrssicherungspflicht sowie seine Überwachungspflicht gegenüber dem Auftragnehmer bleiben hiervon unberührt. Außerhalb der vereinbarten Zeiten und Flächen sowie bei Unmöglichkeit der Leistung nach § 3 Abs. 5 haftet der Auftragnehmer nicht. Der Auftragnehmer dokumentiert seine Einsätze (Datum, Uhrzeit, Witterung, Maßnahme) und stellt diese Nachweise dem Auftraggeber auf Anforderung zur Verfügung.</p>
+            <p className={P}>(4) Der Auftragnehmer haftet nicht für Schäden, die auf ungeeigneter oder mangelhafter Beschaffenheit der zu reinigenden bzw. zu pflegenden Objekte beruhen (z. B. lose Fliesen, schadhafte Bodenbeläge, morsche Gehölze), sofern diese nicht offensichtlich erkennbar waren und der Auftraggeber nicht darauf hingewiesen hat.</p>
+            <p className={P}>(5) Die Haftung nach dem Produkthaftungsgesetz sowie aus einer übernommenen Garantie bleibt unberührt. Der Auftragnehmer unterhält eine Betriebshaftpflichtversicherung; Angaben hierzu finden sich im <a href="/impressum" className={LINK}>Impressum</a>.</p>
+            <p className={P}>(6) Soweit die Haftung des Auftragnehmers ausgeschlossen oder beschränkt ist, gilt dies auch für die persönliche Haftung seiner Mitarbeiter, Vertreter und Erfüllungsgehilfen.</p>
           </section>
 
           <section>
-            <h2 className="font-outfit font-bold text-[#1C1917] text-xl mb-3">
-              § 10 Kündigung
-            </h2>
-            <p>
-              (1) Bis zur Fertigstellung des Werks kann der Auftraggeber jederzeit
-              den Vertrag kündigen (§ 648 BGB). Kündigt er, ist der Auftragnehmer
-              berechtigt, die vereinbarte Vergütung zu verlangen; er muss sich
-              jedoch dasjenige anrechnen lassen, was er infolge der Aufhebung
-              des Vertrags an Aufwendungen erspart oder durch anderweitige
-              Verwendung seiner Arbeitskraft erwirbt oder zu erwerben böswillig
-              unterlässt.
-            </p>
-            <p className="mt-3">
-              (2) Das Recht zur außerordentlichen Kündigung aus wichtigem Grund
-              (§ 648a BGB) bleibt für beide Parteien unberührt.
-            </p>
+            <h2 className={H2}>§ 10 Personal, Abwerbeverbot</h2>
+            <p>(1) Der Auftragnehmer setzt ausschließlich zuverlässiges, eingewiesenes Personal ein und stellt die Einhaltung der arbeits-, sozialversicherungs- und mindestlohnrechtlichen Vorschriften sicher.</p>
+            <p className={P}>(2) Der Auftraggeber ist nicht berechtigt, dem Personal des Auftragnehmers Weisungen zu erteilen; Wünsche und Beanstandungen sind an den Auftragnehmer zu richten.</p>
+            <p className={P}>(3) Gegenüber Unternehmern gilt: Der Auftraggeber verpflichtet sich, während der Vertragslaufzeit und sechs Monate danach keine Mitarbeiter des Auftragnehmers, die im Objekt eingesetzt waren, abzuwerben oder ohne Zustimmung des Auftragnehmers zu beschäftigen.</p>
           </section>
 
           <section>
-            <h2 className="font-outfit font-bold text-[#1C1917] text-xl mb-3">
-              § 11 Datenschutz
-            </h2>
-            <p>
-              Personenbezogene Daten des Auftraggebers werden im Rahmen der
-              Vertragsabwicklung gemäß den Bestimmungen der
-              Datenschutz-Grundverordnung (DSGVO) und des Bundesdatenschutz-
-              gesetzes (BDSG) verarbeitet. Einzelheiten ergeben sich aus der
-              <a
-                href="/datenschutz"
-                data-testid="agb-datenschutz-link"
-                className="text-[#0A8EDB] hover:underline"
-              >
-                {" "}Datenschutzerklärung
-              </a>.
-            </p>
+            <h2 className={H2}>§ 11 Datenschutz</h2>
+            <p>Personenbezogene Daten des Auftraggebers werden im Rahmen der Vertragsabwicklung gemäß der Datenschutz-Grundverordnung (DSGVO) und dem Bundesdatenschutzgesetz (BDSG) verarbeitet. Einzelheiten ergeben sich aus der <a href="/datenschutz" data-testid="agb-datenschutz-link" className={LINK}>Datenschutzerklärung</a>.</p>
           </section>
 
           <section>
-            <h2 className="font-outfit font-bold text-[#1C1917] text-xl mb-3">
-              § 12 Streitbeilegung
-            </h2>
-            <p>
-              (1) Die Europäische Kommission stellt eine Plattform zur
-              Online-Streitbeilegung (OS) bereit:
-              <a
-                href="https://ec.europa.eu/consumers/odr/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#0A8EDB] hover:underline"
-              >
-                {" "}https://ec.europa.eu/consumers/odr/
-              </a>.
-            </p>
-            <p className="mt-3">
-              (2) Der Auftragnehmer ist nicht bereit und nicht verpflichtet, an
-              Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle
-              teilzunehmen (§ 36 VSBG).
-            </p>
+            <h2 className={H2}>§ 12 Verbraucherstreitbeilegung</h2>
+            <p>Der Auftragnehmer ist nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle im Sinne des Verbraucherstreitbeilegungsgesetzes (VSBG) teilzunehmen.</p>
           </section>
 
           <section>
-            <h2 className="font-outfit font-bold text-[#1C1917] text-xl mb-3">
-              § 13 Schlussbestimmungen
-            </h2>
-            <p>
-              (1) Es gilt ausschließlich das Recht der Bundesrepublik Deutschland
-              unter Ausschluss des UN-Kaufrechts (CISG). Bei Verbrauchern gilt
-              diese Rechtswahl nur, soweit hierdurch der gewährte Schutz durch
-              zwingende Bestimmungen des Rechts des Staates, in dem der
-              Verbraucher seinen gewöhnlichen Aufenthalt hat, nicht entzogen
-              wird.
-            </p>
-            <p className="mt-3">
-              (2) Erfüllungsort und – soweit gesetzlich zulässig – ausschließlicher
-              Gerichtsstand für alle Streitigkeiten aus diesem Vertrag mit
-              Kaufleuten, juristischen Personen des öffentlichen Rechts und
-              öffentlich-rechtlichen Sondervermögen ist der Sitz des
-              Auftragnehmers in 52134 Herzogenrath.
-            </p>
-            <p className="mt-3">
-              (3) Sollten einzelne Bestimmungen dieser AGB unwirksam sein oder
-              werden, so wird die Wirksamkeit der übrigen Bestimmungen hiervon
-              nicht berührt. An die Stelle der unwirksamen Bestimmung tritt die
-              gesetzliche Regelung.
-            </p>
+            <h2 className={H2}>§ 13 Schlussbestimmungen</h2>
+            <p>(1) Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts (CISG). Gegenüber Verbrauchern gilt diese Rechtswahl nur, soweit ihnen dadurch nicht der Schutz zwingender Bestimmungen des Rechts des Staates entzogen wird, in dem sie ihren gewöhnlichen Aufenthalt haben.</p>
+            <p className={P}>(2) Erfüllungsort ist das jeweilige Objekt des Auftraggebers. Ist der Auftraggeber Kaufmann, juristische Person des öffentlichen Rechts oder öffentlich-rechtliches Sondervermögen, ist ausschließlicher Gerichtsstand für alle Streitigkeiten aus diesem Vertrag Duisburg.</p>
+            <p className={P}>(3) Sollten einzelne Bestimmungen dieser AGB unwirksam sein oder werden, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt. An die Stelle der unwirksamen Bestimmung tritt die gesetzliche Regelung.</p>
           </section>
 
           <section className="pt-4 border-t border-[#E7E5E4] text-sm text-[#78716C]">
             <p>
-              Roda Haustechnik – Inhaber Marco Nobis<br />
-              Schillerstr. 14, 52134 Herzogenrath<br />
-              Stand der AGB: <span>April 2026</span>
+              MK Gebäudemanagement – Inhaber Mert Kurnali<br />
+              Auf dem Damm 112, 47137 Duisburg<br />
+              Stand der AGB: <span>Juni 2026</span>
             </p>
           </section>
         </div>

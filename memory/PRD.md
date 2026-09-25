@@ -31,8 +31,11 @@ Rechtliche Seiten (Impressum, Datenschutz, AGB, Widerruf) und Cookie-Banner NICH
 - Hero: Hintergrund als Diashow (3 Bilder: clean-hero, detail-gruenflaeche, detail-winter) mit horizontalem Slide-Effekt (framer-motion AnimatePresence), Wechsel alle 6 s, Bilder vorgeladen; Übergang 1,8 s mit Slide + Crossfade + leichtem Zoom (ease-out expo)
 - Farben: Hauptfarbe #0E6FB3 → #0A8EDB (Hover #0873B3), CSS-Var --primary/--ring angepasst, theme-color; Header immer weiß mit dunklem Text (Header.js)
 
+- Rechtstexte (2026-06, auf Nutzerwunsch): Impressum (§ 5 DDG, Inhaber Mert Kurnali, HWK Düsseldorf, DEVK, kein OS-Link mehr, TDM-Vorbehalt, Bildnachweise), Datenschutz (TDDDG, Kontaktformular inkl. Betreff, WhatsApp, Auftragsdaten/Winterdienst-Doku), AGB (Dienst-/Werkvertrag, Winterdienst, Grünpflege, Preisanpassung, § 309 Nr. 9 Laufzeiten, Gerichtsstand Duisburg), Widerruf (Firmendaten, branchenspezifische Ausnahmen) – nicht 1:1 von mk-gebaeudemanagement.de übernommen. Offene Platzhalter (gelb markiert): HWK-Betriebsnummer, USt-ID, Hosting-Anbieter, SMTP-Anbieter, Social-Media-URLs. config/company.js auf MK umgestellt.
+
 ## Bewusst unverändert
-- Impressum/Datenschutz/AGB/Widerruf-Seiten + CookieBanner (noch alte Firma – Kunde aktualisiert)
+- CookieBanner (Text generisch)
+- Standort.js / StandortIndex.js (SEO-Landingpages) noch SHK-Inhalte – nicht verlinkt, Backlog
 - Logo (logo.svg / logo-white.svg) – Kunde tauscht manuell
 - Social-Media-Links im Footer (aria-Labels aktualisiert, hrefs alt)
 - .env: REACT_APP_BACKEND_URL zeigt auf externe Produktionsdomain (unverändert)
@@ -42,7 +45,8 @@ Rechtliche Seiten (Impressum, Datenschutz, AGB, Widerruf) und Cookie-Banner NICH
 
 ## Backlog / Nächste Schritte (P1/P2)
 - Logo durch MK-Logo ersetzen (public/logo.svg, logo-white.svg)
-- Impressum/Datenschutz/AGB auf MK Gebäudemanagement aktualisieren
+- Platzhalter in Impressum/Datenschutz füllen (HWK-Nr., USt-ID, Hoster, SMTP-Anbieter, Social-URLs)
+- Standort-Seiten (/standorte) auf MK umstellen oder entfernen
 - Footer Social-Media-hrefs auf echte MK-Kanäle setzen
 - Optional: Kontaktformular-Backend/Empfangsmail auf MK umstellen
 - robots.txt / sitemap.xml Domain ggf. anpassen
